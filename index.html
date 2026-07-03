@@ -202,6 +202,25 @@
     .btn-report:hover { background: #c9273d; }
     .btn-report svg { width: 14px; height: 14px; }
 
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #fff;
+      color: #374151;
+      border: 1px solid #d1d5db;
+      text-decoration: none;
+      padding: 7px 15px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      transition: background 0.15s, border-color 0.15s;
+      white-space: nowrap;
+    }
+
+    .btn-secondary:hover { background: #f3f4f6; border-color: #9ca3af; }
+    .btn-secondary svg { width: 13px; height: 13px; }
+
     .total-row {
       background: #f8f9fc;
       border-radius: 10px;
@@ -421,6 +440,8 @@
 <script>
 let DELIVERY = {};
 const REPORT_ICON = '<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path></svg>';
+const ORDER_ICON = '<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="width:13px;height:13px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>';
+const SCREENSHOT_ICON = '<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="width:13px;height:13px;"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>';
 
 const MONTHS_FULL = ['januari','februari','mars','april','maj','juni','juli','augusti','september','oktober','november','december'];
 const MONTHS_ABBR = ['jan','feb','mar','apr','maj','jun','jul','aug','sep','okt','nov','dec'];
@@ -528,6 +549,8 @@ function campaignCard(id, c, currency, type) {
   const typeLabel = type === 'pm' ? 'Partner Marketing' : 'Always-On';
   const typeCls = type === 'pm' ? 'type-pm' : 'type-aon';
   const reportLink = REPORT_URLS[id] ? '<a class="btn-report" href="' + REPORT_URLS[id] + '" target="_blank" rel="noopener">' + REPORT_ICON + ' Se rapport</a>' : '';
+  const orderLink = ORDER_URLS[id] ? '<a class="btn-secondary" href="' + ORDER_URLS[id] + '" target="_blank" rel="noopener">' + ORDER_ICON + ' Se order</a>' : '';
+  const screenshotLink = SCREENSHOT_URLS[id] ? '<a class="btn-secondary" href="' + SCREENSHOT_URLS[id] + '" target="_blank" rel="noopener">' + SCREENSHOT_ICON + ' Se skärmdumpar</a>' : '';
 
   return '<div class="campaign-card" data-report-id="' + id + '">' +
     '<div>' +
@@ -540,6 +563,8 @@ function campaignCard(id, c, currency, type) {
     '<div class="card-actions">' +
       '<span class="status-badge ' + status.cls + '">' + status.label + '</span>' +
       reportLink +
+      screenshotLink +
+      orderLink +
     '</div>' +
   '</div>';
 }
@@ -705,6 +730,72 @@ const REPORT_URLS = {
   "1143": "https://prisjakt.gotom.io/reporting-task-report/1143/6c8a2e4853fcd9a49cb95cf292513c13",
   "1144": "https://prisjakt.gotom.io/reporting-task-report/1144/47a94e165241f83cc951e2efc6b0994a",
   "1145": "https://prisjakt.gotom.io/reporting-task-report/1145/8f808c0c7c058f2c710a25608d314a0e"
+};
+
+const ORDER_URLS = {
+  "882": "https://prisjakt.gotom.io/campaign-confirmation/993/88eae16d976b17c2a4e0056719976eac",
+  "892": "https://prisjakt.gotom.io/campaign-confirmation/1010/abf64741906adc9be5710ed0174a82ab",
+  "894": "https://prisjakt.gotom.io/campaign-confirmation/1027/edb9c9350ef16d15f1e3a8f79c68f04d",
+  "1223": "https://prisjakt.gotom.io/campaign-confirmation/1029/c9599d883e1a1b55cd5760672d17910f",
+  "1044": "https://prisjakt.gotom.io/campaign-confirmation/1201/4f6c45641787eff6a99596c6fae7e546",
+  "1046": "https://prisjakt.gotom.io/campaign-confirmation/1203/4e55384f36ec69714d78d7fcd43103b1",
+  "1045": "https://prisjakt.gotom.io/campaign-confirmation/1202/395d80237724d97e4388c4eeae67861d",
+  "1047": "https://prisjakt.gotom.io/campaign-confirmation/1204/c1cf2df33c8c17fcedc46fdd7d4d135a",
+  "1048": "https://prisjakt.gotom.io/campaign-confirmation/1205/c0abda0282abce4c38884f56c870718c",
+  "1049": "https://prisjakt.gotom.io/campaign-confirmation/1206/31aec9bf3dd5b1e764ecc55f4dc81e53",
+  "1050": "https://prisjakt.gotom.io/campaign-confirmation/1207/ad365d9ee06d84f25dd3723b6ec532fa",
+  "1051": "https://prisjakt.gotom.io/campaign-confirmation/1208/81d49bfce68a71201341c7b1dfc4fc97",
+  "1055": "https://prisjakt.gotom.io/campaign-confirmation/1213/b0de7a7b41d51f30cda26eb66564aaf7",
+  "1056": "https://prisjakt.gotom.io/campaign-confirmation/1214/d9aa3be8b644f377ec204a40b73c0a96",
+  "1094": "https://prisjakt.gotom.io/campaign-confirmation/1278/c866480a118b21e0791dccfaaf88f228",
+  "1095": "https://prisjakt.gotom.io/campaign-confirmation/1279/aa833cbb5c5558f8aeafc67a8da65d6f",
+  "1096": "https://prisjakt.gotom.io/campaign-confirmation/1281/d1c46edc48b6d1c02e7f1198d9961a00",
+  "1198": "https://prisjakt.gotom.io/campaign-confirmation/1422/a30734fe610c96fc6dfcf3601024ff78",
+  "1199": "https://prisjakt.gotom.io/campaign-confirmation/1423/e2eabe2f07e222571e5c4adc0fb31479",
+  "881": "https://prisjakt.gotom.io/campaign-confirmation/994/69ed523f04d3e108018e4db14cbd36b4",
+  "893": "https://prisjakt.gotom.io/campaign-confirmation/1011/cc53a44eccccce3a350e50fe2202f3bb",
+  "895": "https://prisjakt.gotom.io/campaign-confirmation/1025/eaad2e2473ff8a705a5d83fb175b5218",
+  "1224": "https://prisjakt.gotom.io/campaign-confirmation/1036/a2861b6029c49c65cdce87a8c0d3ad78",
+  "1225": "https://prisjakt.gotom.io/campaign-confirmation/1037/016cd32ffcc24cdab030dc80002c7da2",
+  "1226": "https://prisjakt.gotom.io/campaign-confirmation/1038/9e755b77ede062a39cdc821991d6ae22",
+  "1141": "https://prisjakt.gotom.io/campaign-confirmation/1039/3754fd3cc0e9004eb21536a3917adeb1",
+  "1142": "https://prisjakt.gotom.io/campaign-confirmation/1040/f6de5015e8c3722ee2d47b79d6632fa0",
+  "1143": "https://prisjakt.gotom.io/campaign-confirmation/1041/0679786b9d0f98d2dfab2dce0f40f0fa",
+  "1144": "https://prisjakt.gotom.io/campaign-confirmation/1042/a218064730a93f8afb0bd5a110b31eeb",
+  "1145": "https://prisjakt.gotom.io/campaign-confirmation/1043/3a592e2a8fe210bd2352e57db747d7f2"
+};
+
+const SCREENSHOT_URLS = {
+  "882": "https://prisjakt.gotom.io/screenshot-document/show/882/2789583e791095bdcff9f984c25d917e",
+  "892": "https://prisjakt.gotom.io/screenshot-document/show/892/556a8b3680a245fe189d0eb0decf7d64",
+  "894": "https://prisjakt.gotom.io/screenshot-document/show/894/72adab4c01d11e6c95c69528ff98cc2a",
+  "1223": "https://prisjakt.gotom.io/screenshot-document/show/1223/2e18692f1a520db5db4480d7ef9cceb7",
+  "1044": "https://prisjakt.gotom.io/screenshot-document/show/1044/bb0061520bf97e6e80785db30daabb20",
+  "1046": "https://prisjakt.gotom.io/screenshot-document/show/1046/b08883f7eebeffc6e03a78a0551de92a",
+  "1045": "https://prisjakt.gotom.io/screenshot-document/show/1045/43c50735abaaeece576a6af1e8de83ea",
+  "1047": "https://prisjakt.gotom.io/screenshot-document/show/1047/fd5c1ee8e549300ac3ae962a60ebb375",
+  "1048": "https://prisjakt.gotom.io/screenshot-document/show/1048/bfcaa7f7faeec3211f2b85f39fdaaefe",
+  "1049": "https://prisjakt.gotom.io/screenshot-document/show/1049/48edae186fc6510a055be8747219bd59",
+  "1050": "https://prisjakt.gotom.io/screenshot-document/show/1050/4c361ad2d786c5eb84caf70b284aaddb",
+  "1051": "https://prisjakt.gotom.io/screenshot-document/show/1051/8ec465d18eed3560f919907925029bd1",
+  "1055": "https://prisjakt.gotom.io/screenshot-document/show/1055/dbbe1292871cc8b6ac6923982dcfda1f",
+  "1056": "https://prisjakt.gotom.io/screenshot-document/show/1056/4332396b4a8752558c70319e828fec74",
+  "1094": "https://prisjakt.gotom.io/screenshot-document/show/1094/a765ae03a7683539adb10fb894925fc8",
+  "1095": "https://prisjakt.gotom.io/screenshot-document/show/1095/dcfe4cc0b5d7b3081e35ceed5f0f0a63",
+  "1096": "https://prisjakt.gotom.io/screenshot-document/show/1096/b0f18030577c6de5aebe95136f323dd1",
+  "1198": "https://prisjakt.gotom.io/screenshot-document/show/1198/720de4532ca597483c34b6656cd0df92",
+  "1199": "https://prisjakt.gotom.io/screenshot-document/show/1199/e3a68ad68b0a7b6fb716b68e18802e7a",
+  "881": "https://prisjakt.gotom.io/screenshot-document/show/881/f3d9f564544511dae4f9abf3467c35dc",
+  "893": "https://prisjakt.gotom.io/screenshot-document/show/893/c7989f6a03c6d09064b3921dee9d3917",
+  "895": "https://prisjakt.gotom.io/screenshot-document/show/895/5678c2050dd3650bced848fbf8d7e5ae",
+  "1224": "https://prisjakt.gotom.io/screenshot-document/show/1224/48cf377fa8774d2a33273e3b1228ac7b",
+  "1225": "https://prisjakt.gotom.io/screenshot-document/show/1225/088b12fd53bfd8f18af4f86efaa85e49",
+  "1226": "https://prisjakt.gotom.io/screenshot-document/show/1226/4c9982ff33e81a18e8632b3bb0b832da",
+  "1141": "https://prisjakt.gotom.io/screenshot-document/show/1141/72fd7638c9be0e408f028c50a17580a5",
+  "1142": "https://prisjakt.gotom.io/screenshot-document/show/1142/69658c4c942dac8ded981943dcf3b99e",
+  "1143": "https://prisjakt.gotom.io/screenshot-document/show/1143/dd08b4546f4359256b2a8ff96b81436a",
+  "1144": "https://prisjakt.gotom.io/screenshot-document/show/1144/b9b319300944879d9617cf14b916f412",
+  "1145": "https://prisjakt.gotom.io/screenshot-document/show/1145/73fbb73c40f201a6dda830ce8fe05a58"
 };
 
 loadDelivery();
