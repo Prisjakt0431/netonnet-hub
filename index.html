@@ -454,7 +454,42 @@ function deliveryClass(pct) {
   return 'bad';
 }
 
-function statusInfo(products) {
+function findMonths(name) {
+  const lower = name.toLowerCase();
+  const found = [];
+  MONTHS_FULL.forEach((m, i) => {
+    let pos = lower.indexOf(m);
+    while (pos !== -1) { found.push({ pos, m: i }); pos = lower.indexOf(m, pos + 1); }
+  });
+  MONTHS_ABBR.forEach((m, i) => {
+    const re = new RegExp('\\b' + m + '\\b', 'g');
+    let match;
+    while ((match = re.exec(lower))) {
+      if (!found.some(f => f.pos === match.index)) found.push({ pos: match.index, m: i });
+    }
+  });
+  found.sort((a, b) => a.pos - b.pos);
+  return found;
+}
+
+function campaignDateRange(name) {
+  const months = findMonths(name);
+  if (!months.length) return null;
+  const startIdx = months[0].m;
+  const endIdx = months[months.length - 1].m;
+  const start = new Date(2026, startIdx, 1, 0, 0, 0);
+  const end = new Date(2026, endIdx + 1, 0, 23, 59, 59);
+  return { start, end };
+}
+
+function statusInfo(products, name) {
+  const range = name ? campaignDateRange(name) : null;
+  if (range) {
+    const now = new Date();
+    if (now > range.end) return { cls: 'status-ended', label: 'Avslutat' };
+    if (now < range.start) return { cls: 'status-confirmed', label: 'Bokad' };
+    return { cls: 'status-live', label: 'Pågår' };
+  }
   const vals = Object.values(products || {});
   const pcts = vals.map(p => p.pct).filter(p => p !== null && p !== undefined);
   if (!vals.length || !pcts.length) return { cls: 'status-confirmed', label: 'Bokad' };
@@ -526,7 +561,7 @@ function campaignCard(id, c, currency, type) {
     }).join('');
 
   const deliverySection = bars ? '<div class="delivery-section"><div class="delivery-bars">' + bars + '</div></div>' : '';
-  const status = statusInfo(products);
+  const status = statusInfo(products, c.name);
   const typeLabel = type === 'pm' ? 'Partner Marketing' : 'Always-On';
   const typeCls = type === 'pm' ? 'type-pm' : 'type-aon';
   const reportLink = REPORT_URLS[id] ? '<a class="btn-report" href="' + REPORT_URLS[id] + '" target="_blank" rel="noopener">' + REPORT_ICON + ' Se rapport</a>' : '';
@@ -559,7 +594,7 @@ function buildUnderTab(market) {
     if (c.market !== market) return;
     const products = c.products || {};
     if (!Object.keys(products).length) return;
-    const status = statusInfo(products);
+    const status = statusInfo(products, c.name);
     if (status.cls === 'status-live') return;
     const hasUnder = Object.values(products).some(p => p.pct !== null && p.pct !== undefined && p.pct < 100);
     if (!hasUnder) return;
