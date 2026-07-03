@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="sv">
 <head>
 <meta charset="utf-8"/>
@@ -24,336 +23,618 @@
     }
 
     .logo { display: flex; align-items: center; gap: 14px; }
-    .logo-text { color: #fff; font-size: 20px; font-weight: 700; letter-spacing: 0.3px; }
-    .logo-sub { color: rgba(255,255,255,0.55); font-size: 13px; }
 
     .header-meta { text-align: right; font-size: 13px; color: rgba(255,255,255,0.6); }
-    .header-meta strong { display: block; color: #fff; font-size: 13px; }
+    .header-meta strong { display: block; font-size: 15px; color: #ffffff; margin-bottom: 2px; }
 
-    .header-actions { display: flex; align-items: center; gap: 20px; }
-
-    .btn {
-      background: #1c3a5e;
-      color: #fff;
-      border: 1px solid rgba(255,255,255,0.15);
-      padding: 9px 16px;
-      border-radius: 8px;
-      font-size: 13px;
-      cursor: pointer;
-      font-weight: 600;
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 24px;
     }
-    .btn:hover { background: #274a73; }
 
-    nav {
-      background: #fff;
-      border-bottom: 1px solid #e3e7ee;
+    .page-title { font-size: 26px; font-weight: 700; margin-bottom: 6px; }
+    .page-subtitle { color: #666; font-size: 14px; margin-bottom: 28px; }
+
+    /* TAB NAV */
+    .tab-nav {
       display: flex;
-      padding: 0 40px;
+      border-bottom: 2px solid #e4e8ef;
+      margin-bottom: 28px;
       gap: 4px;
     }
-    nav button {
+
+    .tab-btn {
+      padding: 10px 22px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #888;
       background: none;
       border: none;
-      padding: 16px 20px;
-      font-size: 14px;
-      font-weight: 600;
-      color: #6b7385;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
       cursor: pointer;
-      border-bottom: 3px solid transparent;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.15s;
     }
-    nav button.active {
+
+    .tab-btn:hover { color: #0D2137; }
+
+    .tab-btn.active {
       color: #0D2137;
-      border-bottom: 3px solid #0D2137;
+      border-bottom-color: #0D2137;
     }
 
-    main { padding: 32px 40px 80px; max-width: 1280px; margin: 0 auto; }
+    .tab-flag { font-size: 18px; }
 
-    .tab-panel { display: none; }
-    .tab-panel.active { display: block; }
+    /* TAB CONTENT */
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
 
-    .market-heading {
-      font-size: 15px;
+    /* SUB-SECTION */
+    .sub-section { margin-bottom: 32px; }
+
+    .sub-section-header {
+      font-size: 11px;
       font-weight: 700;
-      color: #0D2137;
-      margin: 28px 0 14px;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .market-heading:first-child { margin-top: 0; }
-
-    .group-label {
-      font-size: 12px;
-      font-weight: 700;
-      color: #8890a0;
-      text-transform: uppercase;
-      letter-spacing: 0.6px;
-      margin: 18px 0 10px;
+      color: #aaa;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e4e8ef;
     }
 
-    .card {
+    /* CAMPAIGN CARDS */
+    .campaign-grid { display: grid; gap: 14px; }
+
+    .campaign-card {
       background: #fff;
-      border: 1px solid #e3e7ee;
-      border-radius: 10px;
-      padding: 18px 20px;
-      margin-bottom: 12px;
+      border-radius: 12px;
+      border: 1px solid #e4e8ef;
+      padding: 20px 22px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: center;
+      transition: box-shadow 0.2s;
     }
-    .card-head {
+
+    .campaign-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.07); }
+
+    .campaign-type {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 3px 9px;
+      border-radius: 20px;
+      margin-bottom: 7px;
+    }
+
+    .type-aon { background: #e8f4fd; color: #1a7cc4; }
+    .type-special { background: #fff0e6; color: #c2500a; }
+    .type-pm { background: #eaf3de; color: #3b6d11; }
+
+    .campaign-name { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+    .campaign-period { font-size: 13px; color: #888; margin-bottom: 13px; }
+
+    .products { display: flex; gap: 8px; flex-wrap: wrap; }
+
+    .product-chip {
+      background: #f4f6f9;
+      border: 1px solid #dde1e9;
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 12px;
+    }
+
+    .product-chip .label { font-weight: 600; color: #444; }
+    .product-chip .amount { color: #666; margin-left: 4px; }
+
+    .card-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 9px;
+    }
+
+    .status-badge {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 11px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .status-live { background: #e6f9f0; color: #16a34a; }
+    .status-live::before {
+      content: '';
+      width: 7px; height: 7px;
+      background: #16a34a;
+      border-radius: 50%;
+      animation: pulse 1.5s infinite;
+    }
+
+    .status-ended { background: #f0f0f0; color: #888; }
+
+    .status-confirmed { background: #fff7e6; color: #b45309; }
+    .status-confirmed::before {
+      content: '';
+      width: 7px; height: 7px;
+      background: #f59e0b;
+      border-radius: 50%;
+    }
+
+    .status-planned { background: #f1f5f9; color: #64748b; }
+    .status-planned::before {
+      content: '';
+      width: 7px; height: 7px;
+      background: #94a3b8;
+      border-radius: 50%;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .btn-report {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #E8334A;
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: background 0.15s;
+      white-space: nowrap;
+    }
+
+    .btn-report:hover { background: #c9273d; }
+    .btn-report svg { width: 14px; height: 14px; }
+
+    .total-row {
+      background: #f8f9fc;
+      border-radius: 10px;
+      padding: 14px 22px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 12px;
+      margin-top: 4px;
+      border: 1px solid #e4e8ef;
     }
-    .card-title { font-size: 14px; font-weight: 700; }
-    .card-export {
-      background: none;
-      border: 1px solid #d5dae3;
-      color: #556;
-      padding: 5px 10px;
-      border-radius: 6px;
-      font-size: 12px;
-      cursor: pointer;
-    }
-    .card-export:hover { background: #f4f6f9; }
 
-    .product-row {
-      display: grid;
-      grid-template-columns: 110px 1fr 90px 90px 70px;
+    .total-label { font-size: 13px; font-weight: 600; color: #666; }
+    .total-amounts { display: flex; gap: 24px; }
+    .total-item { text-align: right; }
+    .total-item .t-label { font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 0.5px; }
+    .total-item .t-value { font-size: 15px; font-weight: 700; color: #1a1a2e; }
+
+    footer {
+      text-align: center;
+      padding: 28px;
+      color: #bbb;
+      font-size: 12px;
+      border-top: 1px solid #e4e8ef;
+      margin-top: 20px;
+    }
+
+    /* Delivery bars */
+    .delivery-section {
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid #f0f0f0;
+    }
+    .delivery-section::before {
+      content: 'Levererat';
+      display: block;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 6px;
+    }
+    .delivery-bar {
+      display: flex;
       align-items: center;
-      gap: 14px;
-      padding: 8px 0;
-      border-top: 1px solid #f0f2f6;
+      gap: 8px;
+      margin-bottom: 5px;
+      font-size: 12px;
+    }
+    .delivery-prod-name {
+      width: 96px;
+      color: #666;
+      font-size: 11px;
+      flex-shrink: 0;
+    }
+    .delivery-track {
+      flex: 1;
+      height: 6px;
+      background: #e8e8e8;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .delivery-fill {
+      height: 100%;
+      border-radius: 3px;
+      transition: width 0.5s ease;
+    }
+    .delivery-fill.good { background: #22c55e; }
+    .delivery-fill.warn { background: #22c55e; }
+    .delivery-fill.bad  { background: #22c55e; }
+    .delivery-pct {
+      width: 42px;
+      text-align: right;
+      font-size: 11px;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    .delivery-pct.good { color: #16a34a; }
+    .delivery-pct.warn { color: #16a34a; }
+    .delivery-pct.bad  { color: #16a34a; }
+    .delivery-ctr { font-size:10px; color:#999; width:62px; text-align:right; flex-shrink:0; }
+
+    /* Underleverans tab */
+    .under-grid { display: grid; gap: 16px; }
+    .under-card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 18px 20px;
+    }
+    .under-card-header { margin-bottom: 12px; }
+    .under-prod-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 5px 0;
+      border-bottom: 1px solid #f5f5f5;
       font-size: 13px;
     }
-    .product-row:first-of-type { border-top: none; }
-    .product-name { font-weight: 600; color: #333; }
-
-    .bar-wrap { background: #eef1f5; border-radius: 6px; height: 18px; position: relative; overflow: hidden; }
-    .bar-fill { height: 100%; border-radius: 6px; }
-    .bar-fill.ok { background: #2e9e5b; }
-    .bar-fill.warn { background: #e0a419; }
-    .bar-fill.bad { background: #d64545; }
-    .bar-fill.none { background: #c7ccd6; }
-    .bar-label {
-      position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
-      font-size: 11px; font-weight: 700; color: #1a1a2e; text-shadow: 0 1px 1px rgba(255,255,255,0.4);
+    .under-prod-row:last-child { border-bottom: none; }
+    .under-prod-name { flex: 1; color: #555; }
+    .under-diff { font-size: 12px; color: #888; min-width: 100px; text-align: right; }
+    .under-total {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 2px solid #f0f0f0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-
-    .num { text-align: right; color: #444; font-variant-numeric: tabular-nums; }
-    .ctr { text-align: right; color: #8890a0; font-size: 12px; }
-
-    .agg-table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #e3e7ee; border-radius: 10px; overflow: hidden; margin-bottom: 20px; }
-    .agg-table th, .agg-table td { padding: 10px 16px; font-size: 13px; text-align: right; border-top: 1px solid #f0f2f6; }
-    .agg-table th:first-child, .agg-table td:first-child { text-align: left; }
-    .agg-table th { background: #f7f9fb; color: #6b7385; font-size: 12px; text-transform: uppercase; letter-spacing: 0.4px; }
-    .agg-table tr.total-row td { font-weight: 700; background: #f7f9fb; border-top: 2px solid #dde2ea; }
-
-    .empty-note { color: #8890a0; font-size: 13px; padding: 10px 0 20px; }
-
-    .under-item {
-      background: #fff; border: 1px solid #f0d6d6; border-left: 4px solid #d64545;
-      border-radius: 8px; padding: 12px 16px; margin-bottom: 10px; font-size: 13px;
-      display: flex; justify-content: space-between; align-items: center;
+    .under-total-label { font-size: 12px; color: #999; }
+    .under-total-value { font-size: 18px; font-weight: 700; }
+    .under-total-value.bad  { color: #dc2626; }
+    .under-total-value.good { color: #16a34a; }
+    .under-empty {
+      text-align: center;
+      color: #aaa;
+      padding: 48px 0;
+      font-size: 15px;
     }
-    .under-item .meta { color: #8890a0; font-size: 12px; }
+    .export-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 16px;
+      padding: 7px 14px;
+      background: #fff;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #374151;
+      cursor: pointer;
+    }
+    .export-btn:hover { background: #f3f4f6; }
+    .under-loading {
+      text-align: center;
+      color: #bbb;
+      padding: 32px 0;
+      font-size: 14px;
+    }
+    .agg-table { width:100%; border-collapse:collapse; font-size:13px; }
+    .agg-table th { text-align:left; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:#999; padding:0 10px 8px 0; border-bottom:1px solid #e4e8ef; }
+    .agg-table td { padding:10px 10px 10px 0; border-bottom:1px solid #f5f5f5; color:#333; }
+    .agg-table tfoot td { font-weight:700; border-top:2px solid #e4e8ef; border-bottom:none; padding-top:12px; color:#1a1a2e; }
+    .agg-table td:not(:first-child), .agg-table th:not(:first-child) { text-align:right; }
 </style>
 </head>
 <body>
 
 <header>
   <div class="logo">
-    <div>
-      <div class="logo-text">Netonnet</div>
-      <div class="logo-sub">Rapporteringshub 2026/27</div>
-    </div>
+    <img alt="Prisjakt" src="https://cdn.pji.nu/g/rfe/logos/logo_se_v2_light.svg" style="height:32px;"/>
   </div>
-  <div class="header-actions">
-    <button class="btn" onclick="exportAllCSV()">⬇ Exportera total CSV</button>
-    <div class="header-meta">
-      <strong id="updatedAt">–</strong>
-      Senast uppdaterad
-    </div>
+  <div class="header-meta">
+    <strong>Netonnet 2026/27</strong>
+    Kampanjöversikt &middot; Uppdaterad <span id="updatedAt">–</span>
   </div>
 </header>
 
-<nav>
-  <button class="tab-btn active" data-tab="se">Sverige</button>
-  <button class="tab-btn" data-tab="no">Norge</button>
-  <button class="tab-btn" data-tab="agg">Aggregerat resultat</button>
-  <button class="tab-btn" data-tab="under">Underleverans</button>
-</nav>
-
 <main>
-  <div class="tab-panel active" data-panel="se" id="panel-se"></div>
-  <div class="tab-panel" data-panel="no" id="panel-no"></div>
-  <div class="tab-panel" data-panel="agg" id="panel-agg"></div>
-  <div class="tab-panel" data-panel="under" id="panel-under"></div>
+  <div class="page-title">Netonnet 2026/27</div>
+  <p class="page-subtitle">Klicka på &quot;Se rapport&quot; för att följa leverans i realtid via Gotom.</p>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="showTab('se', this)"><span class="tab-flag">🇸🇪</span> Sverige</button>
+    <button class="tab-btn" onclick="showTab('no', this)"><span class="tab-flag">🇳🇴</span> Norge</button>
+  </div>
+
+  <div class="tab-content active" id="tab-se">
+    <div class="tab-nav" style="margin-bottom: 20px;">
+      <button class="tab-btn active" onclick="showSubTab('subtab-se-aon', this)">AON &ndash; Always-On</button>
+      <button class="tab-btn" onclick="showSubTab('subtab-se-pm', this)">PM &ndash; Partner Marketing</button>
+      <button class="tab-btn" onclick="showSubTab('subtab-se-under', this)">Underleverans</button>
+      <button class="tab-btn" onclick="showSubTab('subtab-se-agg', this)">Aggregerat resultat</button>
+    </div>
+    <div class="sub-section" id="subtab-se-aon" style="display:block;">
+      <div class="campaign-grid" id="cards-se-aon"></div>
+    </div>
+    <div class="sub-section" id="subtab-se-pm" style="display:none;">
+      <div class="campaign-grid" id="cards-se-pm"></div>
+    </div>
+    <div class="sub-section" id="subtab-se-under" style="display:none;">
+      <button class="export-btn" onclick="exportAllCSV('se')">&#8681; Exportera total CSV</button>
+      <div id="under-se-content" class="under-loading">Laddar&hellip;</div>
+    </div>
+    <div class="sub-section" id="subtab-se-agg" style="display:none;">
+      <div id="agg-se-content" class="under-loading">Laddar&hellip;</div>
+    </div>
+  </div>
+
+  <div class="tab-content" id="tab-no">
+    <div class="tab-nav" style="margin-bottom: 20px;">
+      <button class="tab-btn active" onclick="showSubTab('subtab-no-aon', this)">AON &ndash; Always-On</button>
+      <button class="tab-btn" onclick="showSubTab('subtab-no-pm', this)">PM &ndash; Partner Marketing</button>
+      <button class="tab-btn" onclick="showSubTab('subtab-no-under', this)">Underleverans</button>
+      <button class="tab-btn" onclick="showSubTab('subtab-no-agg', this)">Aggregerat resultat</button>
+    </div>
+    <div class="sub-section" id="subtab-no-aon" style="display:block;">
+      <div class="campaign-grid" id="cards-no-aon"></div>
+    </div>
+    <div class="sub-section" id="subtab-no-pm" style="display:none;">
+      <div class="campaign-grid" id="cards-no-pm"></div>
+    </div>
+    <div class="sub-section" id="subtab-no-under" style="display:none;">
+      <button class="export-btn" onclick="exportAllCSV('no')">&#8681; Exportera total CSV</button>
+      <div id="under-no-content" class="under-loading">Laddar&hellip;</div>
+    </div>
+    <div class="sub-section" id="subtab-no-agg" style="display:none;">
+      <div id="agg-no-content" class="under-loading">Laddar&hellip;</div>
+    </div>
+  </div>
+
+  <footer>Netonnet rapporteringshub &middot; byggd av Prisjakt</footer>
 </main>
 
 <script>
-let DATA = { updated: null, campaigns: {} };
+let DELIVERY = {};
+const REPORT_ICON = '<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path></svg>';
 
-const MARKET_LABEL = { se: "Sverige", no: "Norge" };
-const TYPE_LABEL = { aon: "AON", pm: "PM" };
+const MONTHS_FULL = ['januari','februari','mars','april','maj','juni','juli','augusti','september','oktober','november','december'];
+const MONTHS_ABBR = ['jan','feb','mar','apr','maj','jun','jul','aug','sep','okt','nov','dec'];
 
-async function load() {
-  const res = await fetch('delivery.json?_=' + Date.now());
-  DATA = await res.json();
-  render();
+function monthSortKey(name) {
+  const lower = name.toLowerCase();
+  let best = 99, bestPos = 1e9;
+  MONTHS_FULL.forEach((m, i) => { const p = lower.indexOf(m); if (p >= 0 && p < bestPos) { bestPos = p; best = i + 1; } });
+  if (best === 99) {
+    MONTHS_ABBR.forEach((m, i) => {
+      const re = new RegExp('\\b' + m + '\\b');
+      const match = lower.match(re);
+      if (match && match.index < bestPos) { bestPos = match.index; best = i + 1; }
+    });
+  }
+  return best;
 }
 
-function render() {
-  document.getElementById('updatedAt').textContent = formatDate(DATA.updated);
-  renderMarketPanel('se');
-  renderMarketPanel('no');
-  renderAggregate();
-  renderUnderdelivery();
+function periodLabel(name) {
+  const parts = name.split('–');
+  const tail = (parts.length > 1 ? parts[parts.length - 1] : name).trim();
+  return tail + ' 2026';
 }
 
-function formatDate(iso) {
-  if (!iso) return '–';
-  const d = new Date(iso);
-  return d.toLocaleString('sv-SE', { dateStyle: 'short', timeStyle: 'short' });
-}
-
-function campaignsFor(market, type) {
-  return Object.entries(DATA.campaigns)
-    .filter(([id, c]) => c.market === market && (!type || c.type === type))
-    .sort((a, b) => a[1].name.localeCompare(b[1].name, 'sv'));
-}
-
-function barClass(pct) {
-  if (pct === null || pct === undefined) return 'none';
-  if (pct >= 90) return 'ok';
-  if (pct >= 50) return 'warn';
+function deliveryClass(pct) {
+  if (pct === null || pct === undefined) return 'warn';
+  if (pct >= 95) return 'good';
+  if (pct >= 75) return 'warn';
   return 'bad';
 }
 
-function fmtMoney(v) {
-  return v.toLocaleString('sv-SE', { maximumFractionDigits: 0 }) + ' kr';
+function statusInfo(products) {
+  const vals = Object.values(products || {});
+  const pcts = vals.map(p => p.pct).filter(p => p !== null && p !== undefined);
+  if (!vals.length || !pcts.length) return { cls: 'status-confirmed', label: 'Bokad' };
+  const allEnded = pcts.every(p => p >= 99);
+  if (allEnded) return { cls: 'status-ended', label: 'Avslutat' };
+  const anyStarted = pcts.some(p => p > 0);
+  if (anyStarted) return { cls: 'status-live', label: 'Pågår' };
+  return { cls: 'status-confirmed', label: 'Bokad' };
 }
 
-function renderMarketPanel(market) {
-  const panel = document.getElementById('panel-' + market);
-  const aon = campaignsFor(market, 'aon');
-  const pm = campaignsFor(market, 'pm');
-
-  let html = '';
-  html += `<div class="group-label">AON</div>`;
-  html += aon.length ? aon.map(([id, c]) => campaignCard(id, c)).join('') : `<div class="empty-note">Inga AON-kampanjer ännu.</div>`;
-
-  html += `<div class="group-label">PM</div>`;
-  html += pm.length ? pm.map(([id, c]) => campaignCard(id, c)).join('') : `<div class="empty-note">Inga PM-kampanjer ännu.</div>`;
-
-  panel.innerHTML = html;
+function fmtAmount(v, currency) {
+  return Math.round(v || 0).toLocaleString('sv-SE') + ' ' + currency;
 }
 
-function campaignCard(id, c) {
-  const products = Object.entries(c.products || {});
-  const rows = products.length
-    ? products.map(([name, p]) => productRow(name, p)).join('')
-    : `<div class="empty-note">Ingen data ännu.</div>`;
-
-  return `
-    <div class="card">
-      <div class="card-head">
-        <div class="card-title">${escapeHtml(c.name)}</div>
-        <button class="card-export" onclick="exportCampaignCSV('${id}')">Exportera CSV</button>
-      </div>
-      ${rows}
-    </div>`;
+function reportUrl(id, token) {
+  return 'https://prisjakt.gotom.io/reporting-task-report/' + id + '/' + token;
 }
 
-function productRow(name, p) {
-  const pct = p.pct;
-  const pctDisplay = (pct === null || pct === undefined) ? '–' : pct.toFixed(1) + '%';
-  const width = pct === null || pct === undefined ? 0 : Math.min(pct, 100);
-  return `
-    <div class="product-row">
-      <div class="product-name">${escapeHtml(name)}</div>
-      <div class="bar-wrap"><div class="bar-fill ${barClass(pct)}" style="width:${width}%"></div><div class="bar-label">${pctDisplay}</div></div>
-      <div class="num">${fmtMoney(p.booked || 0)}</div>
-      <div class="num">${fmtMoney(p.delivered || 0)}</div>
-      <div class="ctr">CTR ${p.ctr !== null && p.ctr !== undefined ? p.ctr.toFixed(2) + '%' : '–'}</div>
-    </div>`;
+async function loadDelivery() {
+  try {
+    const resp = await fetch('delivery.json?v=' + Date.now());
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    const data = await resp.json();
+    DELIVERY = data.campaigns || {};
+    document.getElementById('updatedAt').textContent = data.updated ? new Date(data.updated).toLocaleString('sv-SE', { dateStyle: 'short', timeStyle: 'short' }) : '–';
+    renderCards('se', 'aon');
+    renderCards('se', 'pm');
+    renderCards('no', 'aon');
+    renderCards('no', 'pm');
+    buildUnderTab('se');
+    buildUnderTab('no');
+    buildAggTab('se');
+    buildAggTab('no');
+  } catch (e) {
+    console.warn('Could not load delivery.json:', e);
+  }
 }
 
-function sumType(market, type) {
+function campaignsFor(market, type) {
+  return Object.entries(DELIVERY)
+    .filter(([id, c]) => c.market === market && (c.type || 'aon') === type)
+    .sort((a, b) => monthSortKey(a[1].name) - monthSortKey(b[1].name));
+}
+
+function renderCards(market, type) {
+  const el = document.getElementById('cards-' + market + '-' + type);
+  if (!el) return;
   const list = campaignsFor(market, type);
-  let booked = 0, delivered = 0;
-  list.forEach(([id, c]) => {
-    Object.values(c.products || {}).forEach(p => {
-      booked += p.booked || 0;
-      delivered += p.delivered || 0;
-    });
-  });
-  return { booked, delivered, count: list.length };
+  if (!list.length) { el.innerHTML = '<p style="color:#aaa;font-size:13px;">Inga kampanjer ännu.</p>'; return; }
+  const currency = market === 'se' ? 'kr' : 'NOK';
+  el.innerHTML = list.map(([id, c]) => campaignCard(id, c, currency, type)).join('');
 }
 
-function renderAggregate() {
-  const panel = document.getElementById('panel-agg');
+function campaignCard(id, c, currency, type) {
+  const products = c.products || {};
+  const chips = Object.entries(products).map(([name, p]) => (
+    '<div class="product-chip"><span class="label">' + escapeHtml(name) + '</span><span class="amount">' + fmtAmount(p.booked, currency) + '</span></div>'
+  )).join('');
+
+  const bars = Object.entries(products)
+    .filter(([, p]) => p.pct !== null && p.pct !== undefined)
+    .map(([name, p]) => {
+      const cls = deliveryClass(p.pct);
+      const width = Math.min(Math.max(p.pct, 0), 100);
+      const ctrLabel = (p.ctr !== null && p.ctr !== undefined) ? '<span class="delivery-ctr">' + p.ctr.toFixed(2) + '% CTR</span>' : '';
+      return '<div class="delivery-bar"><span class="delivery-prod-name">' + escapeHtml(name) + '</span>' +
+        '<div class="delivery-track"><div class="delivery-fill ' + cls + '" style="width:' + width + '%"></div></div>' +
+        '<span class="delivery-pct ' + cls + '">' + p.pct.toFixed(1) + '%</span>' + ctrLabel + '</div>';
+    }).join('');
+
+  const deliverySection = bars ? '<div class="delivery-section"><div class="delivery-bars">' + bars + '</div></div>' : '';
+  const status = statusInfo(products);
+  const typeLabel = type === 'pm' ? 'Partner Marketing' : 'Always-On';
+  const typeCls = type === 'pm' ? 'type-pm' : 'type-aon';
+  const reportLink = REPORT_URLS[id] ? '<a class="btn-report" href="' + REPORT_URLS[id] + '" target="_blank" rel="noopener">' + REPORT_ICON + ' Se rapport</a>' : '';
+
+  return '<div class="campaign-card" data-report-id="' + id + '">' +
+    '<div>' +
+      '<span class="campaign-type ' + typeCls + '">' + typeLabel + '</span>' +
+      '<div class="campaign-name">' + escapeHtml(c.name) + '</div>' +
+      '<div class="campaign-period">' + escapeHtml(periodLabel(c.name)) + '</div>' +
+      '<div class="products">' + chips + '</div>' +
+      deliverySection +
+    '</div>' +
+    '<div class="card-actions">' +
+      '<span class="status-badge ' + status.cls + '">' + status.label + '</span>' +
+      reportLink +
+    '</div>' +
+  '</div>';
+}
+
+function buildUnderTab(market) {
+  const el = document.getElementById('under-' + market + '-content');
+  if (!el) return;
+  const currency = market === 'se' ? 'kr' : 'NOK';
+  const under = [];
+  Object.entries(DELIVERY).forEach(([id, c]) => {
+    if (c.market !== market) return;
+    const products = c.products || {};
+    if (!Object.keys(products).length) return;
+    const status = statusInfo(products);
+    if (status.cls === 'status-live') return;
+    const hasUnder = Object.values(products).some(p => p.pct !== null && p.pct !== undefined && p.pct < 100);
+    if (!hasUnder) return;
+    under.push([id, c]);
+  });
+
+  if (!under.length) { el.className = 'under-empty'; el.innerHTML = 'Inga avslutade kampanjer med underleverans just nu.'; return; }
+  el.className = '';
+  el.innerHTML = '<div class="under-grid">' + under.map(([id, c]) => {
+    let totalDiff = 0;
+    const rows = Object.entries(c.products).map(([name, p]) => {
+      const diff = (p.booked || 0) - (p.delivered || 0);
+      totalDiff += diff;
+      return '<div class="under-prod-row"><span class="under-prod-name">' + escapeHtml(name) + '</span><span class="under-diff">' + fmtAmount(p.delivered, currency) + ' av ' + fmtAmount(p.booked, currency) + '</span></div>';
+    }).join('');
+    const diffCls = totalDiff > 0 ? 'bad' : 'good';
+    return '<div class="under-card">' +
+      '<div class="under-card-header"><strong>' + escapeHtml(c.name) + '</strong></div>' +
+      rows +
+      '<div class="under-total"><span class="under-total-label">Total avvikelse</span><span class="under-total-value ' + diffCls + '">' + fmtAmount(totalDiff, currency) + '</span></div>' +
+    '</div>';
+  }).join('') + '</div>';
+}
+
+function buildAggTab(market) {
+  const el = document.getElementById('agg-' + market + '-content');
+  if (!el) return;
+  const currency = market === 'se' ? 'kr' : 'NOK';
+  const types = [{ key: 'aon', label: 'AON – Always-On' }, { key: 'pm', label: 'PM – Partner Marketing' }];
   let html = '';
-  ['se', 'no'].forEach(market => {
-    html += `<div class="market-heading">${MARKET_LABEL[market]}</div>`;
-    html += aggTable(market, 'aon');
-    html += aggTable(market, 'pm');
-  });
-  panel.innerHTML = html;
-}
+  let anyData = false;
 
-function aggTable(market, type) {
-  const { booked, delivered, count } = sumType(market, type);
-  if (count === 0) {
-    return `<div class="group-label">${TYPE_LABEL[type]}</div><div class="empty-note">Inga ${TYPE_LABEL[type]}-kampanjer i ${MARKET_LABEL[market]}.</div>`;
-  }
-  const pct = booked > 0 ? (delivered / booked * 100) : 0;
-  return `
-    <div class="group-label">${TYPE_LABEL[type]} (${count} kampanj${count === 1 ? '' : 'er'})</div>
-    <table class="agg-table">
-      <thead><tr><th>Rad</th><th>Bokad</th><th>Levererat</th><th>Leverans %</th></tr></thead>
-      <tbody>
-        <tr class="total-row">
-          <td>Bokat totalt</td>
-          <td>${fmtMoney(booked)}</td>
-          <td>${fmtMoney(delivered)}</td>
-          <td>${pct.toFixed(1)}%</td>
-        </tr>
-      </tbody>
-    </table>`;
-}
-
-function renderUnderdelivery() {
-  const panel = document.getElementById('panel-under');
-  const flagged = [];
-  Object.entries(DATA.campaigns).forEach(([id, c]) => {
-    Object.entries(c.products || {}).forEach(([name, p]) => {
-      if (p.pct !== null && p.pct !== undefined && p.pct < 90 && (p.booked || 0) > 0) {
-        flagged.push({ id, campaign: c, product: name, ...p });
-      }
+  types.forEach(t => {
+    const list = Object.values(DELIVERY).filter(c => c.market === market && (c.type || 'aon') === t.key);
+    if (!list.length) return;
+    anyData = true;
+    const prodAgg = {};
+    let nStarted = 0;
+    list.forEach(c => {
+      const products = c.products || {};
+      if (!Object.keys(products).length) return;
+      const started = Object.values(products).some(p => p.pct !== null && p.pct !== undefined && p.pct > 0);
+      if (started) nStarted++;
+      Object.entries(products).forEach(([name, p]) => {
+        if (!prodAgg[name]) prodAgg[name] = { booked: 0, delivered: 0, clicks: 0, impressions: 0 };
+        prodAgg[name].booked += p.booked || 0;
+        prodAgg[name].delivered += p.delivered || 0;
+        prodAgg[name].clicks += p.clicks || 0;
+        prodAgg[name].impressions += p.impressions || 0;
+      });
     });
+
+    let rows = '', totalBooked = 0, totalDelivered = 0, totalClicks = 0;
+    Object.entries(prodAgg).forEach(([name, a]) => {
+      totalBooked += a.booked; totalDelivered += a.delivered; totalClicks += a.clicks;
+      const pct = a.booked > 0 ? (a.delivered / a.booked * 100).toFixed(1) + '%' : '–';
+      const ctr = a.impressions > 0 ? (a.clicks / a.impressions * 100).toFixed(2) + '%' : '–';
+      rows += '<tr><td>' + escapeHtml(name) + '</td><td>' + fmtAmount(a.booked, currency) + '</td><td>' + fmtAmount(a.delivered, currency) + '</td><td>' + pct + '</td><td>' + a.clicks.toLocaleString('sv-SE') + '</td><td>' + ctr + '</td></tr>';
+    });
+    const totalPct = totalBooked > 0 ? (totalDelivered / totalBooked * 100).toFixed(1) + '%' : '–';
+
+    html += '<h4 style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#999;margin:20px 0 10px;">' + t.label + '</h4>';
+    if (nStarted === 0) html += '<p style="font-size:13px;color:#aaa;margin-bottom:8px;">Inga kampanjer har startat ännu.</p>';
+    html += '<div class="under-card" style="overflow-x:auto;margin-bottom:8px;"><table class="agg-table">' +
+      '<thead><tr><th>Produkt</th><th>Bokat totalt</th><th>Levererat</th><th>Leverans %</th><th>Klick</th><th>Snitt CTR</th></tr></thead>' +
+      '<tbody>' + rows + '</tbody>' +
+      '<tfoot><tr><td>Totalt</td><td>' + fmtAmount(totalBooked, currency) + '</td><td>' + fmtAmount(totalDelivered, currency) + '</td><td>' + totalPct + '</td><td>' + totalClicks.toLocaleString('sv-SE') + '</td><td></td></tr></tfoot>' +
+    '</table></div>';
   });
-  flagged.sort((a, b) => a.pct - b.pct);
 
-  if (!flagged.length) {
-    panel.innerHTML = `<div class="empty-note">Inga kampanjer med leverans under 90% just nu.</div>`;
-    return;
-  }
-
-  panel.innerHTML = flagged.map(f => `
-    <div class="under-item">
-      <div>
-        <strong>${escapeHtml(f.campaign.name)}</strong> — ${escapeHtml(f.product)}
-        <div class="meta">${MARKET_LABEL[f.campaign.market]} · ${TYPE_LABEL[f.campaign.type]} · ${fmtMoney(f.delivered)} av ${fmtMoney(f.booked)}</div>
-      </div>
-      <div style="font-weight:700; color:#d64545;">${f.pct.toFixed(1)}%</div>
-    </div>`).join('');
+  if (!anyData) { el.className = 'under-empty'; el.innerHTML = 'Ingen kampanjdata ännu.'; return; }
+  el.className = '';
+  el.innerHTML = html;
 }
 
 function escapeHtml(s) {
-  return String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+  return String(s).replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
 }
 
 function toCSVRow(fields) {
-  return fields.map(f => `"${String(f).replace(/"/g, '""')}"`).join(',') + '\r\n';
+  return fields.map(f => '"' + String(f).replace(/"/g, '""') + '"').join(',') + '\r\n';
 }
 
 function downloadCSV(filename, rows) {
@@ -365,35 +646,68 @@ function downloadCSV(filename, rows) {
   URL.revokeObjectURL(url);
 }
 
-function exportCampaignCSV(id) {
-  const c = DATA.campaigns[id];
-  if (!c) return;
-  const rows = [toCSVRow(['Kampanj', 'Marknad', 'Typ', 'Produkt', 'Bokad', 'Levererat', 'Leverans %', 'Impressions', 'Klick', 'CTR'])];
-  Object.entries(c.products || {}).forEach(([name, p]) => {
-    rows.push(toCSVRow([c.name, MARKET_LABEL[c.market], TYPE_LABEL[c.type], name, p.booked, p.delivered, p.pct, p.impressions, p.clicks, p.ctr]));
-  });
-  downloadCSV(`${c.name.replace(/[^a-z0-9]+/gi, '_')}.csv`, rows);
-}
-
-function exportAllCSV() {
-  const rows = [toCSVRow(['Kampanj', 'Marknad', 'Typ', 'Produkt', 'Bokad', 'Levererat', 'Leverans %', 'Impressions', 'Klick', 'CTR'])];
-  Object.entries(DATA.campaigns).forEach(([id, c]) => {
+function exportAllCSV(market) {
+  const currency = market === 'se' ? 'kr' : 'NOK';
+  const rows = [toCSVRow(['Kampanj', 'Typ', 'Produkt', 'Bokad (' + currency + ')', 'Levererad (' + currency + ')', 'Leverans %', 'Avvikelse (' + currency + ')'])];
+  Object.values(DELIVERY).filter(c => c.market === market).forEach(c => {
     Object.entries(c.products || {}).forEach(([name, p]) => {
-      rows.push(toCSVRow([c.name, MARKET_LABEL[c.market], TYPE_LABEL[c.type], name, p.booked, p.delivered, p.pct, p.impressions, p.clicks, p.ctr]));
+      const pctStr = (p.pct !== null && p.pct !== undefined) ? p.pct.toFixed(1) + '%' : '';
+      rows.push(toCSVRow([c.name, (c.type || 'aon').toUpperCase(), name, Math.round(p.booked || 0), Math.round(p.delivered || 0), pctStr, Math.round((p.booked || 0) - (p.delivered || 0))]));
     });
   });
-  downloadCSV('netonnet_total.csv', rows);
+  downloadCSV('netonnet_' + market + '_total.csv', rows);
 }
 
-document.querySelectorAll('.tab-btn').forEach(btn => {  btn.addEventListener('click', () => {
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    btn.classList.add('active');
-    document.querySelector(`.tab-panel[data-panel="${btn.dataset.tab}"]`).classList.add('active');
-  });
-});
+function showTab(id, btn) {
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  btn.closest('.tab-nav').querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tab-' + id).classList.add('active');
+}
 
-load();
+function showSubTab(id, btn) {
+  const nav = btn.closest('.tab-nav');
+  const container = nav.parentElement;
+  container.querySelectorAll('.sub-section').forEach(el => el.style.display = 'none');
+  document.getElementById(id).style.display = 'block';
+  nav.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+const REPORT_URLS = {
+  "882": "https://prisjakt.gotom.io/reporting-task-report/882/d94e5fbaa9bbe1fefd4c59482b87d1d5",
+  "892": "https://prisjakt.gotom.io/reporting-task-report/892/2395ac68eca37585e8d2c87123051fcc",
+  "894": "https://prisjakt.gotom.io/reporting-task-report/894/c7471a1cec946cfb0d378849ee094574",
+  "1223": "https://prisjakt.gotom.io/reporting-task-report/1223/ec41c0ab91c33ce117713acad0832b37",
+  "1044": "https://prisjakt.gotom.io/reporting-task-report/1044/cdddb3549b2617f405e4d376e4d64d83",
+  "1046": "https://prisjakt.gotom.io/reporting-task-report/1046/350e946254c62fd3e662512674987f59",
+  "1045": "https://prisjakt.gotom.io/reporting-task-report/1045/a6e7bed96f0a4242b415d812ec4c3678",
+  "1047": "https://prisjakt.gotom.io/reporting-task-report/1047/96e75f52fc437ae51e8987a71cba3ea9",
+  "1048": "https://prisjakt.gotom.io/reporting-task-report/1048/96885f55687773a60beec2217faba6c1",
+  "1049": "https://prisjakt.gotom.io/reporting-task-report/1049/78a5e88a79ecbeb2dff5bbc381a04165",
+  "1050": "https://prisjakt.gotom.io/reporting-task-report/1050/543741a2c665b4c1ce223151955dcfde",
+  "1051": "https://prisjakt.gotom.io/reporting-task-report/1051/33730cdb3f2a5ebe89be8a94f3ff3d93",
+  "1055": "https://prisjakt.gotom.io/reporting-task-report/1055/adc6bbbf29848d0d099dff9b04b474f4",
+  "1056": "https://prisjakt.gotom.io/reporting-task-report/1056/34db32b4bb0491ff091b263b84de6829",
+  "1094": "https://prisjakt.gotom.io/reporting-task-report/1094/388fdab050db0c6dd3edc46baebad3fa",
+  "1095": "https://prisjakt.gotom.io/reporting-task-report/1095/64844f52b20eb27c879ff5f3ec8f2908",
+  "1096": "https://prisjakt.gotom.io/reporting-task-report/1096/367dae7fd17e0988a6c34147ab8fb68c",
+  "1198": "https://prisjakt.gotom.io/reporting-task-report/1198/8d045d613c7c217bd2ac71eae11fc8c9",
+  "1199": "https://prisjakt.gotom.io/reporting-task-report/1199/5a7c5e1cf2bf5932ea716f70ed937e5b",
+  "881": "https://prisjakt.gotom.io/reporting-task-report/881/443c147680c5f218593e398e22a3faf1",
+  "893": "https://prisjakt.gotom.io/reporting-task-report/893/e1d6c7a5ad02cb6b87b52d9d3b673ddc",
+  "895": "https://prisjakt.gotom.io/reporting-task-report/895/1b6e682ab593f5bd50854b08029e0f44",
+  "1224": "https://prisjakt.gotom.io/reporting-task-report/1224/27d2af1f4393a7a9ed0d12352f79651c",
+  "1225": "https://prisjakt.gotom.io/reporting-task-report/1225/9a016c3dc65eb58fbb58f866fec951a3",
+  "1226": "https://prisjakt.gotom.io/reporting-task-report/1226/709ea8c2b531f3651f608273045d20ab",
+  "1141": "https://prisjakt.gotom.io/reporting-task-report/1141/d7153250fbf1167e7c56bfa4600f6792",
+  "1142": "https://prisjakt.gotom.io/reporting-task-report/1142/33e14563174642e27dd5e9d80a8283bd",
+  "1143": "https://prisjakt.gotom.io/reporting-task-report/1143/6c8a2e4853fcd9a49cb95cf292513c13",
+  "1144": "https://prisjakt.gotom.io/reporting-task-report/1144/47a94e165241f83cc951e2efc6b0994a",
+  "1145": "https://prisjakt.gotom.io/reporting-task-report/1145/8f808c0c7c058f2c710a25608d314a0e"
+};
+
+loadDelivery();
 </script>
 
 </body>
