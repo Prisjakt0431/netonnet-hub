@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html lang="sv">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Netonnet 2026/27</title>
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f4f6f9;
+      color: #1a1a2e;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #0D2137;
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo { display: flex; align-items: center; gap: 14px; }
+    .logo-text { color: #fff; font-size: 20px; font-weight: 700; letter-spacing: 0.3px; }
+    .logo-sub { color: rgba(255,255,255,0.55); font-size: 13px; }
+
+    .header-meta { text-align: right; font-size: 13px; color: rgba(255,255,255,0.6); }
+    .header-meta strong { display: block; color: #fff; font-size: 13px; }
+
+    .header-actions { display: flex; align-items: center; gap: 20px; }
+
+    .btn {
+      background: #1c3a5e;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 9px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .btn:hover { background: #274a73; }
+
+    nav {
+      background: #fff;
+      border-bottom: 1px solid #e3e7ee;
+      display: flex;
+      padding: 0 40px;
+      gap: 4px;
+    }
+    nav button {
+      background: none;
+      border: none;
+      padding: 16px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #6b7385;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+    }
+    nav button.active {
+      color: #0D2137;
+      border-bottom: 3px solid #0D2137;
+    }
+
+    main { padding: 32px 40px 80px; max-width: 1280px; margin: 0 auto; }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    .market-heading {
+      font-size: 15px;
+      font-weight: 700;
+      color: #0D2137;
+      margin: 28px 0 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .market-heading:first-child { margin-top: 0; }
+
+    .group-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: #8890a0;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin: 18px 0 10px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #e3e7ee;
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-bottom: 12px;
+    }
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .card-title { font-size: 14px; font-weight: 700; }
+    .card-export {
+      background: none;
+      border: 1px solid #d5dae3;
+      color: #556;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .card-export:hover { background: #f4f6f9; }
+
+    .product-row {
+      display: grid;
+      grid-template-columns: 110px 1fr 90px 90px 70px;
+      align-items: center;
+      gap: 14px;
+      padding: 8px 0;
+      border-top: 1px solid #f0f2f6;
+      font-size: 13px;
+    }
+    .product-row:first-of-type { border-top: none; }
+    .product-name { font-weight: 600; color: #333; }
+
+    .bar-wrap { background: #eef1f5; border-radius: 6px; height: 18px; position: relative; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 6px; }
+    .bar-fill.ok { background: #2e9e5b; }
+    .bar-fill.warn { background: #e0a419; }
+    .bar-fill.bad { background: #d64545; }
+    .bar-fill.none { background: #c7ccd6; }
+    .bar-label {
+      position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 700; color: #1a1a2e; text-shadow: 0 1px 1px rgba(255,255,255,0.4);
+    }
+
+    .num { text-align: right; color: #444; font-variant-numeric: tabular-nums; }
+    .ctr { text-align: right; color: #8890a0; font-size: 12px; }
+
+    .agg-table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #e3e7ee; border-radius: 10px; overflow: hidden; margin-bottom: 20px; }
+    .agg-table th, .agg-table td { padding: 10px 16px; font-size: 13px; text-align: right; border-top: 1px solid #f0f2f6; }
+    .agg-table th:first-child, .agg-table td:first-child { text-align: left; }
+    .agg-table th { background: #f7f9fb; color: #6b7385; font-size: 12px; text-transform: uppercase; letter-spacing: 0.4px; }
+    .agg-table tr.total-row td { font-weight: 700; background: #f7f9fb; border-top: 2px solid #dde2ea; }
+
+    .empty-note { color: #8890a0; font-size: 13px; padding: 10px 0 20px; }
+
+    .under-item {
+      background: #fff; border: 1px solid #f0d6d6; border-left: 4px solid #d64545;
+      border-radius: 8px; padding: 12px 16px; margin-bottom: 10px; font-size: 13px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .under-item .meta { color: #8890a0; font-size: 12px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div>
+      <div class="logo-text">Netonnet</div>
+      <div class="logo-sub">Rapporteringshub 2026/27</div>
+    </div>
+  </div>
+  <div class="header-actions">
+    <button class="btn" onclick="exportAllCSV()">⬇ Exportera total CSV</button>
+    <div class="header-meta">
+      <strong id="updatedAt">–</strong>
+      Senast uppdaterad
+    </div>
+  </div>
+</header>
+
+<nav>
+  <button class="tab-btn active" data-tab="se">Sverige</button>
+  <button class="tab-btn" data-tab="no">Norge</button>
+  <button class="tab-btn" data-tab="agg">Aggregerat resultat</button>
+  <button class="tab-btn" data-tab="under">Underleverans</button>
+</nav>
+
+<main>
+  <div class="tab-panel active" data-panel="se" id="panel-se"></div>
+  <div class="tab-panel" data-panel="no" id="panel-no"></div>
+  <div class="tab-panel" data-panel="agg" id="panel-agg"></div>
+  <div class="tab-panel" data-panel="under" id="panel-under"></div>
+</main>
+
+<script>
+let DATA = { updated: null, campaigns: {} };
+
+const MARKET_LABEL = { se: "Sverige", no: "Norge" };
+const TYPE_LABEL = { aon: "AON", pm: "PM" };
+
+async function load() {
+  const res = await fetch('delivery.json?_=' + Date.now());
+  DATA = await res.json();
+  render();
+}
+
+function render() {
+  document.getElementById('updatedAt').textContent = formatDate(DATA.updated);
+  renderMarketPanel('se');
+  renderMarketPanel('no');
+  renderAggregate();
+  renderUnderdelivery();
+}
+
+function formatDate(iso) {
+  if (!iso) return '–';
+  const d = new Date(iso);
+  return d.toLocaleString('sv-SE', { dateStyle: 'short', timeStyle: 'short' });
+}
+
+function campaignsFor(market, type) {
+  return Object.entries(DATA.campaigns)
+    .filter(([id, c]) => c.market === market && (!type || c.type === type))
+    .sort((a, b) => a[1].name.localeCompare(b[1].name, 'sv'));
+}
+
+function barClass(pct) {
+  if (pct === null || pct === undefined) return 'none';
+  if (pct >= 90) return 'ok';
+  if (pct >= 50) return 'warn';
+  return 'bad';
+}
+
+function fmtMoney(v) {
+  return v.toLocaleString('sv-SE', { maximumFractionDigits: 0 }) + ' kr';
+}
+
+function renderMarketPanel(market) {
+  const panel = document.getElementById('panel-' + market);
+  const aon = campaignsFor(market, 'aon');
+  const pm = campaignsFor(market, 'pm');
+
+  let html = '';
+  html += `<div class="group-label">AON</div>`;
+  html += aon.length ? aon.map(([id, c]) => campaignCard(id, c)).join('') : `<div class="empty-note">Inga AON-kampanjer ännu.</div>`;
+
+  html += `<div class="group-label">PM</div>`;
+  html += pm.length ? pm.map(([id, c]) => campaignCard(id, c)).join('') : `<div class="empty-note">Inga PM-kampanjer ännu.</div>`;
+
+  panel.innerHTML = html;
+}
+
+function campaignCard(id, c) {
+  const products = Object.entries(c.products || {});
+  const rows = products.length
+    ? products.map(([name, p]) => productRow(name, p)).join('')
+    : `<div class="empty-note">Ingen data ännu.</div>`;
+
+  return `
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title">${escapeHtml(c.name)}</div>
+        <button class="card-export" onclick="exportCampaignCSV('${id}')">Exportera CSV</button>
+      </div>
+      ${rows}
+    </div>`;
+}
+
+function productRow(name, p) {
+  const pct = p.pct;
+  const pctDisplay = (pct === null || pct === undefined) ? '–' : pct.toFixed(1) + '%';
+  const width = pct === null || pct === undefined ? 0 : Math.min(pct, 100);
+  return `
+    <div class="product-row">
+      <div class="product-name">${escapeHtml(name)}</div>
+      <div class="bar-wrap"><div class="bar-fill ${barClass(pct)}" style="width:${width}%"></div><div class="bar-label">${pctDisplay}</div></div>
+      <div class="num">${fmtMoney(p.booked || 0)}</div>
+      <div class="num">${fmtMoney(p.delivered || 0)}</div>
+      <div class="ctr">CTR ${p.ctr !== null && p.ctr !== undefined ? p.ctr.toFixed(2) + '%' : '–'}</div>
+    </div>`;
+}
+
+function sumType(market, type) {
+  const list = campaignsFor(market, type);
+  let booked = 0, delivered = 0;
+  list.forEach(([id, c]) => {
+    Object.values(c.products || {}).forEach(p => {
+      booked += p.booked || 0;
+      delivered += p.delivered || 0;
+    });
+  });
+  return { booked, delivered, count: list.length };
+}
+
+function renderAggregate() {
+  const panel = document.getElementById('panel-agg');
+  let html = '';
+  ['se', 'no'].forEach(market => {
+    html += `<div class="market-heading">${MARKET_LABEL[market]}</div>`;
+    html += aggTable(market, 'aon');
+    html += aggTable(market, 'pm');
+  });
+  panel.innerHTML = html;
+}
+
+function aggTable(market, type) {
+  const { booked, delivered, count } = sumType(market, type);
+  if (count === 0) {
+    return `<div class="group-label">${TYPE_LABEL[type]}</div><div class="empty-note">Inga ${TYPE_LABEL[type]}-kampanjer i ${MARKET_LABEL[market]}.</div>`;
+  }
+  const pct = booked > 0 ? (delivered / booked * 100) : 0;
+  return `
+    <div class="group-label">${TYPE_LABEL[type]} (${count} kampanj${count === 1 ? '' : 'er'})</div>
+    <table class="agg-table">
+      <thead><tr><th>Rad</th><th>Bokad</th><th>Levererat</th><th>Leverans %</th></tr></thead>
+      <tbody>
+        <tr class="total-row">
+          <td>Bokat totalt</td>
+          <td>${fmtMoney(booked)}</td>
+          <td>${fmtMoney(delivered)}</td>
+          <td>${pct.toFixed(1)}%</td>
+        </tr>
+      </tbody>
+    </table>`;
+}
+
+function renderUnderdelivery() {
+  const panel = document.getElementById('panel-under');
+  const flagged = [];
+  Object.entries(DATA.campaigns).forEach(([id, c]) => {
+    Object.entries(c.products || {}).forEach(([name, p]) => {
+      if (p.pct !== null && p.pct !== undefined && p.pct < 90 && (p.booked || 0) > 0) {
+        flagged.push({ id, campaign: c, product: name, ...p });
+      }
+    });
+  });
+  flagged.sort((a, b) => a.pct - b.pct);
+
+  if (!flagged.length) {
+    panel.innerHTML = `<div class="empty-note">Inga kampanjer med leverans under 90% just nu.</div>`;
+    return;
+  }
+
+  panel.innerHTML = flagged.map(f => `
+    <div class="under-item">
+      <div>
+        <strong>${escapeHtml(f.campaign.name)}</strong> — ${escapeHtml(f.product)}
+        <div class="meta">${MARKET_LABEL[f.campaign.market]} · ${TYPE_LABEL[f.campaign.type]} · ${fmtMoney(f.delivered)} av ${fmtMoney(f.booked)}</div>
+      </div>
+      <div style="font-weight:700; color:#d64545;">${f.pct.toFixed(1)}%</div>
+    </div>`).join('');
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+}
+
+function toCSVRow(fields) {
+  return fields.map(f => `"${String(f).replace(/"/g, '""')}"`).join(',') + '\r\n';
+}
+
+function downloadCSV(filename, rows) {
+  const blob = new Blob([rows.join('')], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = filename;
+  document.body.appendChild(a); a.click(); a.remove();
+  URL.revokeObjectURL(url);
+}
+
+function exportCampaignCSV(id) {
+  const c = DATA.campaigns[id];
+  if (!c) return;
+  const rows = [toCSVRow(['Kampanj', 'Marknad', 'Typ', 'Produkt', 'Bokad', 'Levererat', 'Leverans %', 'Impressions', 'Klick', 'CTR'])];
+  Object.entries(c.products || {}).forEach(([name, p]) => {
+    rows.push(toCSVRow([c.name, MARKET_LABEL[c.market], TYPE_LABEL[c.type], name, p.booked, p.delivered, p.pct, p.impressions, p.clicks, p.ctr]));
+  });
+  downloadCSV(`${c.name.replace(/[^a-z0-9]+/gi, '_')}.csv`, rows);
+}
+
+function exportAllCSV() {
+  const rows = [toCSVRow(['Kampanj', 'Marknad', 'Typ', 'Produkt', 'Bokad', 'Levererat', 'Leverans %', 'Impressions', 'Klick', 'CTR'])];
+  Object.entries(DATA.campaigns).forEach(([id, c]) => {
+    Object.entries(c.products || {}).forEach(([name, p]) => {
+      rows.push(toCSVRow([c.name, MARKET_LABEL[c.market], TYPE_LABEL[c.type], name, p.booked, p.delivered, p.pct, p.impressions, p.clicks, p.ctr]));
+    });
+  });
+  downloadCSV('netonnet_total.csv', rows);
+}
+
+document.querySelectorAll('.tab-btn').forEach(btn => {  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelector(`.tab-panel[data-panel="${btn.dataset.tab}"]`).classList.add('active');
+  });
+});
+
+load();
+</script>
+
+</body>
+</html>
