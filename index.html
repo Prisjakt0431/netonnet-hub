@@ -596,7 +596,7 @@ function buildUnderTab(market) {
     const products = c.products || {};
     if (!Object.keys(products).length) return;
     const status = statusInfo(products, c.name);
-    if (status.cls === 'status-live') return;
+    if (status.cls !== 'status-ended') return;
     const hasUnder = Object.values(products).some(p => p.pct !== null && p.pct !== undefined && p.pct < 100);
     if (!hasUnder) return;
     under.push([id, c]);
