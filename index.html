@@ -483,19 +483,20 @@ function campaignDateRange(name) {
 }
 
 function statusInfo(products, name) {
+  const vals = Object.values(products || {});
+  const pcts = vals.map(p => p.pct).filter(p => p !== null && p !== undefined);
+  const anyStarted = pcts.some(p => p > 0);
+  const allEnded = pcts.length > 0 && pcts.every(p => p >= 99);
+
   const range = name ? campaignDateRange(name) : null;
   if (range) {
     const now = new Date();
     if (now > range.end) return { cls: 'status-ended', label: 'Avslutat' };
-    if (now < range.start) return { cls: 'status-confirmed', label: 'Bokad' };
-    return { cls: 'status-live', label: 'Pågår' };
+    if (anyStarted) return { cls: 'status-live', label: 'Pågår' };
+    return { cls: 'status-confirmed', label: 'Bokad' };
   }
-  const vals = Object.values(products || {});
-  const pcts = vals.map(p => p.pct).filter(p => p !== null && p !== undefined);
   if (!vals.length || !pcts.length) return { cls: 'status-confirmed', label: 'Bokad' };
-  const allEnded = pcts.every(p => p >= 99);
   if (allEnded) return { cls: 'status-ended', label: 'Avslutat' };
-  const anyStarted = pcts.some(p => p > 0);
   if (anyStarted) return { cls: 'status-live', label: 'Pågår' };
   return { cls: 'status-confirmed', label: 'Bokad' };
 }
