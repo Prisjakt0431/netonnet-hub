@@ -615,7 +615,7 @@ function buildUnderTab(market) {
     return '<div class="under-card">' +
       '<div class="under-card-header"><strong>' + escapeHtml(c.name) + '</strong></div>' +
       rows +
-      '<div class="under-total"><span class="under-total-label">Total avvikelse</span><span class="under-total-value ' + diffCls + '">' + fmtAmount(totalDiff, currency) + '</span></div>' +
+      '<div class="under-total"><span class="under-total-label">Total avvikelse</span><span class="under-total-value ' + diffCls + '">' + fmtAmount(Math.abs(totalDiff), currency) + '</span></div>' +
     '</div>';
   }).join('') + '</div>';
 }
