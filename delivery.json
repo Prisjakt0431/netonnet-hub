@@ -1,185 +1,703 @@
 {
-  "updated": "2026-07-07T19:17:29Z",
+  "updated": "2026-07-07T23:31:30Z",
   "campaigns": {
     "882": {
       "name": "Netonnet SE – AON Februari",
       "market": "se",
       "type": "aon",
-      "products": {}
+      "products": {
+        "A.E": {
+          "booked": 34999.92,
+          "delivered": 34955.84,
+          "pct": 99.9,
+          "impressions": 369512,
+          "clicks": 408,
+          "ctr": 0.11
+        },
+        "ROC": {
+          "booked": 18571.49,
+          "delivered": 18770.63,
+          "pct": 101.1,
+          "impressions": 198421,
+          "clicks": 344,
+          "ctr": 0.17
+        }
+      }
     },
     "892": {
       "name": "Netonnet SE – AON Mars",
       "market": "se",
       "type": "aon",
-      "products": {}
+      "products": {
+        "ROC": {
+          "booked": 36970.91,
+          "delivered": 36970.91,
+          "pct": 100.0,
+          "impressions": 390813,
+          "clicks": 859,
+          "ctr": 0.22
+        },
+        "A.E": {
+          "booked": 14983.98,
+          "delivered": 14983.98,
+          "pct": 100.0,
+          "impressions": 158393,
+          "clicks": 136,
+          "ctr": 0.09
+        }
+      }
     },
     "894": {
       "name": "Netonnet SE – AON April",
       "market": "se",
       "type": "aon",
-      "products": {}
+      "products": {
+        "A.E": {
+          "booked": 17999.92,
+          "delivered": 18175.31,
+          "pct": 101.0,
+          "impressions": 192128,
+          "clicks": 332,
+          "ctr": 0.17
+        },
+        "ROC": {
+          "booked": 41999.94,
+          "delivered": 42191.88,
+          "pct": 100.5,
+          "impressions": 446003,
+          "clicks": 996,
+          "ctr": 0.22
+        },
+        "Welcome Page": {
+          "booked": 17571.74,
+          "delivered": 18157.4,
+          "pct": 103.3,
+          "impressions": 56302,
+          "clicks": 828,
+          "ctr": 1.47
+        }
+      }
     },
     "1223": {
       "name": "Netonnet SE – AON Maj",
       "market": "se",
       "type": "aon",
-      "products": {}
+      "products": {
+        "A.E": {
+          "booked": 24999.94,
+          "delivered": 25188.39,
+          "pct": 100.8,
+          "impressions": 266262,
+          "clicks": 340,
+          "ctr": 0.13
+        },
+        "ROC": {
+          "booked": 54999.97,
+          "delivered": 51966.43,
+          "pct": 94.5,
+          "impressions": 549328,
+          "clicks": 1388,
+          "ctr": 0.25
+        }
+      }
     },
     "1044": {
       "name": "Netonnet SE – Samsung TV Maj",
       "market": "se",
       "type": "pm",
-      "products": {}
+      "products": {
+        "ROC": {
+          "booked": 69999.93,
+          "delivered": 67827.73,
+          "pct": 96.9,
+          "impressions": 716995,
+          "clicks": 1273,
+          "ctr": 0.18
+        }
+      }
     },
     "1046": {
       "name": "Netonnet SE – Weber Maj",
       "market": "se",
       "type": "pm",
-      "products": {}
+      "products": {
+        "ROC": {
+          "booked": 79999.91,
+          "delivered": 78133.92,
+          "pct": 97.7,
+          "impressions": 825940,
+          "clicks": 1588,
+          "ctr": 0.19
+        }
+      }
     },
     "1045": {
       "name": "Netonnet SE – Pure Elscooter Maj",
       "market": "se",
       "type": "pm",
-      "products": {}
+      "products": {
+        "ROC": {
+          "booked": 74999.92,
+          "delivered": 73064.5,
+          "pct": 97.4,
+          "impressions": 772352,
+          "clicks": 1919,
+          "ctr": 0.25
+        }
+      }
     },
     "1047": {
       "name": "Netonnet SE – Gardena Maj-Juni",
       "market": "se",
       "type": "pm",
-      "products": {}
+      "products": {
+        "ROC": {
+          "booked": 49999.98,
+          "delivered": 49650.05,
+          "pct": 99.3,
+          "impressions": 524842,
+          "clicks": 1358,
+          "ctr": 0.26
+        }
+      }
     },
     "1048": {
       "name": "Netonnet SE – Samsung Phones Maj-Juni",
       "market": "se",
       "type": "pm",
-      "products": {}
+      "products": {
+        "ROC": {
+          "booked": 49999.98,
+          "delivered": 50198.35,
+          "pct": 100.4,
+          "impressions": 530638,
+          "clicks": 773,
+          "ctr": 0.15
+        }
+      }
     },
     "1049": {
       "name": "Netonnet SE – Samsung Tablet Juni",
       "market": "se",
       "type": "pm",
-      "products": {}
+      "products": {
+        "ROC": {
+          "booked": 69999.93,
+          "delivered": 70199.82,
+          "pct": 100.3,
+          "impressions": 742070,
+          "clicks": 1739,
+          "ctr": 0.23
+        }
+      }
     },
     "1050": {
       "name": "Netonnet SE – Samsung Phones Juni-Juli",
       "market": "se",
       "type": "pm",
-      "products": {}
+      "products": {
+        "ROC": {
+          "booked": 69999.93,
+          "delivered": 70196.79,
+          "pct": 100.3,
+          "impressions": 742038,
+          "clicks": 1498,
+          "ctr": 0.2
+        }
+      }
     },
     "1051": {
       "name": "Netonnet SE – Ecovacs Juni-Juli",
       "market": "se",
       "type": "pm",
-      "products": {}
+      "products": {
+        "ROC": {
+          "booked": 74999.92,
+          "delivered": 75202.18,
+          "pct": 100.3,
+          "impressions": 794949,
+          "clicks": 1357,
+          "ctr": 0.17
+        }
+      }
     },
     "1055": {
       "name": "Netonnet SE – TCL Juni",
       "market": "se",
       "type": "pm",
-      "products": {}
+      "products": {
+        "ROC": {
+          "booked": 34999.92,
+          "delivered": 35199.24,
+          "pct": 100.6,
+          "impressions": 372085,
+          "clicks": 600,
+          "ctr": 0.16
+        }
+      }
     },
     "1056": {
       "name": "Netonnet SE – LG Juni",
       "market": "se",
       "type": "pm",
-      "products": {}
+      "products": {
+        "ROC": {
+          "booked": 34999.92,
+          "delivered": 35199.62,
+          "pct": 100.6,
+          "impressions": 372089,
+          "clicks": 615,
+          "ctr": 0.17
+        }
+      }
     },
     "1094": {
       "name": "Netonnet SE – Samsung TV Juni-Juli",
       "market": "se",
       "type": "pm",
-      "products": {}
+      "products": {
+        "A.E": {
+          "booked": 19999.95,
+          "delivered": 11219.37,
+          "pct": 56.1,
+          "impressions": 118598,
+          "clicks": 329,
+          "ctr": 0.28
+        },
+        "ROC": {
+          "booked": 54999.97,
+          "delivered": 12984.04,
+          "pct": 23.6,
+          "impressions": 137252,
+          "clicks": 558,
+          "ctr": 0.41
+        }
+      }
     },
     "1095": {
       "name": "Netonnet SE – Dreame Robotgräsklippare Juli",
       "market": "se",
       "type": "pm",
-      "products": {}
+      "products": {
+        "A.E": {
+          "booked": 17999.92,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
+        },
+        "ROC": {
+          "booked": 41999.94,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
+        }
+      }
     },
     "1096": {
       "name": "Netonnet SE – Dreame Robotdammsugare Juli",
       "market": "se",
       "type": "pm",
-      "products": {}
+      "products": {
+        "A.E": {
+          "booked": 17999.92,
+          "delivered": 9411.56,
+          "pct": 52.3,
+          "impressions": 99488,
+          "clicks": 160,
+          "ctr": 0.16
+        },
+        "ROC": {
+          "booked": 51999.92,
+          "delivered": 16008.69,
+          "pct": 30.8,
+          "impressions": 169225,
+          "clicks": 387,
+          "ctr": 0.23
+        }
+      }
     },
     "1198": {
       "name": "Netonnet SE – Apple iPhone Juli",
       "market": "se",
       "type": "pm",
-      "products": {}
+      "products": {
+        "A.E": {
+          "booked": 19999.95,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
+        },
+        "ROC": {
+          "booked": 24999.94,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
+        },
+        "Welcome Page": {
+          "booked": 19999.84,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
+        }
+      }
     },
     "1199": {
       "name": "Netonnet SE – Samsung Phones Aug",
       "market": "se",
       "type": "pm",
-      "products": {}
+      "products": {
+        "A.E": {
+          "booked": 19999.95,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
+        },
+        "ROC": {
+          "booked": 39999.91,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
+        }
+      }
     },
     "881": {
       "name": "Netonnet NO – AON Februari",
       "market": "no",
       "type": "aon",
-      "products": {}
+      "products": {
+        "ROC": {
+          "booked": 37454.88,
+          "delivered": 37653.83,
+          "pct": 100.5,
+          "impressions": 398032,
+          "clicks": 735,
+          "ctr": 0.18
+        },
+        "A.E": {
+          "booked": 17999.92,
+          "delivered": 18188.74,
+          "pct": 101.0,
+          "impressions": 192270,
+          "clicks": 299,
+          "ctr": 0.16
+        }
+      }
     },
     "893": {
       "name": "Netonnet NO – AON Mars",
       "market": "no",
       "type": "aon",
-      "products": {}
+      "products": {
+        "ROC": {
+          "booked": 55454.9,
+          "delivered": 55653.46,
+          "pct": 100.4,
+          "impressions": 588303,
+          "clicks": 829,
+          "ctr": 0.14
+        },
+        "A.E": {
+          "booked": 19999.95,
+          "delivered": 20188.49,
+          "pct": 100.9,
+          "impressions": 213409,
+          "clicks": 346,
+          "ctr": 0.16
+        }
+      }
     },
     "895": {
       "name": "Netonnet NO – AON April",
       "market": "no",
       "type": "aon",
-      "products": {}
+      "products": {
+        "Welcome Page": {
+          "booked": 24999.88,
+          "delivered": 25617.46,
+          "pct": 102.5,
+          "impressions": 79434,
+          "clicks": 1344,
+          "ctr": 1.69
+        },
+        "ROC": {
+          "booked": 70454.96,
+          "delivered": 70652.96,
+          "pct": 100.3,
+          "impressions": 746860,
+          "clicks": 1091,
+          "ctr": 0.15
+        },
+        "A.E": {
+          "booked": 29999.93,
+          "delivered": 30189.41,
+          "pct": 100.6,
+          "impressions": 319127,
+          "clicks": 606,
+          "ctr": 0.19
+        }
+      }
     },
     "1224": {
       "name": "Netonnet NO – AON Maj",
       "market": "no",
       "type": "aon",
-      "products": {}
+      "products": {
+        "Welcome Page": {
+          "booked": 24999.88,
+          "delivered": 25618.11,
+          "pct": 102.5,
+          "impressions": 79436,
+          "clicks": 1131,
+          "ctr": 1.42
+        },
+        "ROC": {
+          "booked": 70453.92,
+          "delivered": 70653.24,
+          "pct": 100.3,
+          "impressions": 746863,
+          "clicks": 1339,
+          "ctr": 0.18
+        },
+        "A.E": {
+          "booked": 29999.93,
+          "delivered": 30186.1,
+          "pct": 100.6,
+          "impressions": 319092,
+          "clicks": 523,
+          "ctr": 0.16
+        }
+      }
     },
     "1225": {
       "name": "Netonnet NO – AON Juni",
       "market": "no",
       "type": "aon",
-      "products": {}
+      "products": {
+        "Welcome Page": {
+          "booked": 24999.88,
+          "delivered": 25623.92,
+          "pct": 102.5,
+          "impressions": 79454,
+          "clicks": 879,
+          "ctr": 1.11
+        },
+        "ROC": {
+          "booked": 70453.92,
+          "delivered": 70575.29,
+          "pct": 100.2,
+          "impressions": 746039,
+          "clicks": 985,
+          "ctr": 0.13
+        },
+        "A.E": {
+          "booked": 29999.93,
+          "delivered": 30166.71,
+          "pct": 100.6,
+          "impressions": 318887,
+          "clicks": 586,
+          "ctr": 0.18
+        }
+      }
     },
     "1226": {
       "name": "Netonnet NO – AON Juli",
       "market": "no",
       "type": "aon",
-      "products": {}
+      "products": {
+        "Welcome Page": {
+          "booked": 14999.8,
+          "delivered": 3302.08,
+          "pct": 22.0,
+          "impressions": 10239,
+          "clicks": 41,
+          "ctr": 0.4
+        },
+        "ROC": {
+          "booked": 35454.94,
+          "delivered": 2746.05,
+          "pct": 7.7,
+          "impressions": 29028,
+          "clicks": 59,
+          "ctr": 0.2
+        },
+        "A.E": {
+          "booked": 14999.97,
+          "delivered": 3418.18,
+          "pct": 22.8,
+          "impressions": 36133,
+          "clicks": 42,
+          "ctr": 0.12
+        }
+      }
     },
     "1141": {
       "name": "Netonnet NO – AON Augusti",
       "market": "no",
       "type": "aon",
-      "products": {}
+      "products": {
+        "Welcome Page": {
+          "booked": 19999.84,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
+        },
+        "ROC": {
+          "booked": 30454.96,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
+        },
+        "A.E": {
+          "booked": 24999.94,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
+        }
+      }
     },
     "1142": {
       "name": "Netonnet NO – AON September",
       "market": "no",
       "type": "aon",
-      "products": {}
+      "products": {
+        "Welcome Page": {
+          "booked": 19999.84,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
+        },
+        "ROC": {
+          "booked": 30454.96,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
+        },
+        "A.E": {
+          "booked": 24999.94,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
+        }
+      }
     },
     "1143": {
       "name": "Netonnet NO – AON Oktober",
       "market": "no",
       "type": "aon",
-      "products": {}
+      "products": {
+        "Welcome Page": {
+          "booked": 19999.84,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
+        },
+        "ROC": {
+          "booked": 30454.96,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
+        },
+        "A.E": {
+          "booked": 24999.94,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
+        }
+      }
     },
     "1144": {
       "name": "Netonnet NO – AON November",
       "market": "no",
       "type": "aon",
-      "products": {}
+      "products": {
+        "Welcome Page": {
+          "booked": 29999.92,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
+        },
+        "ROC": {
+          "booked": 50454.91,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
+        },
+        "A.E": {
+          "booked": 24999.94,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
+        }
+      }
     },
     "1145": {
       "name": "Netonnet NO – AON December",
       "market": "no",
       "type": "aon",
-      "products": {}
+      "products": {
+        "Welcome Page": {
+          "booked": 29999.92,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
+        },
+        "ROC": {
+          "booked": 65449.96,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
+        },
+        "A.E": {
+          "booked": 34999.92,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
+        }
+      }
     }
   }
 }
