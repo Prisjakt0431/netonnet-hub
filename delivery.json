@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-13T23:26:47Z",
+  "updated": "2026-07-14T07:24:38Z",
   "campaigns": {
     "882": {
       "name": "Netonnet SE – AON Februari",
@@ -281,19 +281,19 @@
       "products": {
         "A.E": {
           "booked": 17999.92,
-          "delivered": 1259.5,
-          "pct": 7.0,
-          "impressions": 13314,
-          "clicks": 42,
-          "ctr": 0.32
+          "delivered": 1512.94,
+          "pct": 8.4,
+          "impressions": 15993,
+          "clicks": 50,
+          "ctr": 0.31
         },
         "ROC": {
           "booked": 41999.94,
-          "delivered": 2764.69,
-          "pct": 6.6,
-          "impressions": 29225,
-          "clicks": 63,
-          "ctr": 0.22
+          "delivered": 3542.2,
+          "pct": 8.4,
+          "impressions": 37444,
+          "clicks": 87,
+          "ctr": 0.23
         }
       }
     },
@@ -304,18 +304,18 @@
       "products": {
         "A.E": {
           "booked": 17999.92,
-          "delivered": 16825.65,
-          "pct": 93.5,
-          "impressions": 177861,
-          "clicks": 277,
+          "delivered": 16962.92,
+          "pct": 94.2,
+          "impressions": 179312,
+          "clicks": 280,
           "ctr": 0.16
         },
         "ROC": {
           "booked": 51999.92,
-          "delivered": 48041.57,
-          "pct": 92.4,
-          "impressions": 507839,
-          "clicks": 935,
+          "delivered": 48854.28,
+          "pct": 94.0,
+          "impressions": 516430,
+          "clicks": 943,
           "ctr": 0.18
         }
       }
@@ -520,27 +520,27 @@
       "products": {
         "Welcome Page": {
           "booked": 14999.8,
-          "delivered": 6888.6,
-          "pct": 45.9,
-          "impressions": 21360,
-          "clicks": 121,
-          "ctr": 0.57
+          "delivered": 7055.01,
+          "pct": 47.0,
+          "impressions": 21876,
+          "clicks": 127,
+          "ctr": 0.58
         },
         "ROC": {
           "booked": 35454.94,
-          "delivered": 15455.65,
-          "pct": 43.6,
-          "impressions": 163379,
-          "clicks": 225,
+          "delivered": 15758.09,
+          "pct": 44.4,
+          "impressions": 166576,
+          "clicks": 229,
           "ctr": 0.14
         },
         "A.E": {
           "booked": 14999.97,
-          "delivered": 6682.35,
-          "pct": 44.5,
-          "impressions": 70638,
-          "clicks": 99,
-          "ctr": 0.14
+          "delivered": 6894.26,
+          "pct": 46.0,
+          "impressions": 72878,
+          "clicks": 106,
+          "ctr": 0.15
         }
       }
     },
