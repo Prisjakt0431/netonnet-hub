@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-27T03:33:08Z",
+  "updated": "2026-07-27T07:36:47Z",
   "campaigns": {
     "882": {
       "name": "Netonnet SE – AON Februari",
@@ -327,27 +327,27 @@
       "products": {
         "A.E": {
           "booked": 19999.95,
-          "delivered": 30.65,
-          "pct": 0.2,
-          "impressions": 324,
+          "delivered": 74.36,
+          "pct": 0.4,
+          "impressions": 786,
           "clicks": 0,
           "ctr": 0.0
         },
         "ROC": {
           "booked": 24999.94,
-          "delivered": 32.64,
-          "pct": 0.1,
-          "impressions": 345,
-          "clicks": 2,
-          "ctr": 0.58
+          "delivered": 56.38,
+          "pct": 0.2,
+          "impressions": 596,
+          "clicks": 6,
+          "ctr": 1.01
         },
         "Welcome Page": {
           "booked": 19999.84,
-          "delivered": 123.2,
-          "pct": 0.6,
-          "impressions": 382,
+          "delivered": 158.03,
+          "pct": 0.8,
+          "impressions": 490,
           "clicks": 3,
-          "ctr": 0.79
+          "ctr": 0.61
         }
       }
     },
@@ -520,26 +520,26 @@
       "products": {
         "Welcome Page": {
           "booked": 14999.8,
-          "delivered": 13298.29,
-          "pct": 88.7,
-          "impressions": 41235,
-          "clicks": 276,
+          "delivered": 13320.22,
+          "pct": 88.8,
+          "impressions": 41303,
+          "clicks": 278,
           "ctr": 0.67
         },
         "ROC": {
           "booked": 35454.94,
-          "delivered": 30247.88,
-          "pct": 85.3,
-          "impressions": 319745,
+          "delivered": 30282.41,
+          "pct": 85.4,
+          "impressions": 320110,
           "clicks": 383,
           "ctr": 0.12
         },
         "A.E": {
           "booked": 14999.97,
-          "delivered": 12990.85,
-          "pct": 86.6,
-          "impressions": 137324,
-          "clicks": 210,
+          "delivered": 13087.82,
+          "pct": 87.3,
+          "impressions": 138349,
+          "clicks": 212,
           "ctr": 0.15
         }
       }
