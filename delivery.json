@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-31T14:17:41Z",
+  "updated": "2026-07-31T17:42:48Z",
   "campaigns": {
     "882": {
       "name": "Netonnet SE – AON Februari",
@@ -327,27 +327,27 @@
       "products": {
         "A.E": {
           "booked": 19999.95,
-          "delivered": 7296.4,
-          "pct": 36.5,
-          "impressions": 77129,
-          "clicks": 58,
-          "ctr": 0.08
+          "delivered": 7447.57,
+          "pct": 37.2,
+          "impressions": 78727,
+          "clicks": 59,
+          "ctr": 0.07
         },
         "ROC": {
           "booked": 24999.94,
-          "delivered": 2717.57,
-          "pct": 10.9,
-          "impressions": 28727,
-          "clicks": 126,
+          "delivered": 2912.83,
+          "pct": 11.7,
+          "impressions": 30791,
+          "clicks": 134,
           "ctr": 0.44
         },
         "Welcome Page": {
           "booked": 19999.84,
-          "delivered": 6921.17,
-          "pct": 34.6,
-          "impressions": 21461,
-          "clicks": 188,
-          "ctr": 0.88
+          "delivered": 7145.31,
+          "pct": 35.7,
+          "impressions": 22156,
+          "clicks": 200,
+          "ctr": 0.9
         }
       }
     },
@@ -520,25 +520,25 @@
       "products": {
         "Welcome Page": {
           "booked": 14999.8,
-          "delivered": 15321.33,
-          "pct": 102.1,
-          "impressions": 47508,
-          "clicks": 329,
+          "delivered": 15404.21,
+          "pct": 102.7,
+          "impressions": 47765,
+          "clicks": 331,
           "ctr": 0.69
         },
         "ROC": {
           "booked": 35454.94,
-          "delivered": 35077.68,
-          "pct": 98.9,
-          "impressions": 370800,
-          "clicks": 436,
+          "delivered": 35261.58,
+          "pct": 99.5,
+          "impressions": 372744,
+          "clicks": 437,
           "ctr": 0.12
         },
         "A.E": {
           "booked": 14999.97,
-          "delivered": 15027.21,
-          "pct": 100.2,
-          "impressions": 158850,
+          "delivered": 15089.84,
+          "pct": 100.6,
+          "impressions": 159512,
           "clicks": 254,
           "ctr": 0.16
         }
