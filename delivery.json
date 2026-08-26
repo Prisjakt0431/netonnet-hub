@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-26T16:50:07Z",
+  "updated": "2026-08-26T19:52:27Z",
   "campaigns": {
     "882": {
       "name": "Netonnet SE – AON Februari",
@@ -358,18 +358,18 @@
       "products": {
         "A.E": {
           "booked": 19999.95,
-          "delivered": 14559.79,
-          "pct": 72.8,
-          "impressions": 153909,
-          "clicks": 224,
-          "ctr": 0.15
+          "delivered": 14751.36,
+          "pct": 73.8,
+          "impressions": 155934,
+          "clicks": 226,
+          "ctr": 0.14
         },
         "ROC": {
           "booked": 39999.91,
-          "delivered": 28940.32,
-          "pct": 72.4,
-          "impressions": 305923,
-          "clicks": 356,
+          "delivered": 29417.86,
+          "pct": 73.5,
+          "impressions": 310971,
+          "clicks": 360,
           "ctr": 0.12
         }
       }
@@ -551,25 +551,25 @@
       "products": {
         "Welcome Page": {
           "booked": 19999.84,
-          "delivered": 17315.67,
-          "pct": 86.6,
-          "impressions": 53692,
-          "clicks": 511,
+          "delivered": 17412.1,
+          "pct": 87.1,
+          "impressions": 53991,
+          "clicks": 514,
           "ctr": 0.95
         },
         "ROC": {
           "booked": 30454.96,
-          "delivered": 25848.03,
-          "pct": 84.9,
-          "impressions": 273235,
-          "clicks": 277,
+          "delivered": 25955.59,
+          "pct": 85.2,
+          "impressions": 274372,
+          "clicks": 279,
           "ctr": 0.1
         },
         "A.E": {
           "booked": 24999.94,
-          "delivered": 21217.93,
-          "pct": 84.9,
-          "impressions": 224291,
+          "delivered": 21311.2,
+          "pct": 85.2,
+          "impressions": 225277,
           "clicks": 399,
           "ctr": 0.18
         }
