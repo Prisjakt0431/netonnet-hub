@@ -42,6 +42,7 @@ CAMPAIGNS = [
 {"id": "1096", "token": "367dae7fd17e0988a6c34147ab8fb68c", "name": "Netonnet SE – Dreame Robotdammsugare Juli", "market": "se", "type": "pm"},
 {"id": "1198", "token": "8d045d613c7c217bd2ac71eae11fc8c9", "name": "Netonnet SE – Apple iPhone Juli", "market": "se", "type": "pm"},
 {"id": "1199", "token": "5a7c5e1cf2bf5932ea716f70ed937e5b", "name": "Netonnet SE – Samsung Phones Aug", "market": "se", "type": "pm"},
+{"id": "1271", "token": "7a9c21282f0dc0f01785f543ec04b598", "name": "Netonnet SE – Pure Elscooter 1-15 Sept", "market": "se", "type": "pm"},
 
 # Norway – AON
 {"id": "881", "token": "443c147680c5f218593e398e22a3faf1", "name": "Netonnet NO – AON Februari", "market": "no", "type": "aon"},
@@ -56,8 +57,6 @@ CAMPAIGNS = [
 {"id": "1144", "token": "47a94e165241f83cc951e2efc6b0994a", "name": "Netonnet NO – AON November", "market": "no", "type": "aon"},
 {"id": "1145", "token": "8f808c0c7c058f2c710a25608d314a0e", "name": "Netonnet NO – AON December", "market": "no", "type": "aon"},
 
-# Norway – PM
-{"id": "1271", "token": "7a9c21282f0dc0f01785f543ec04b598", "name": "Netonnet NO – Pure Elscooter 1-15 Sept", "market": "no", "type": "pm"},
 ]
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (prisjakt delivery-checker/1.0)"}
