@@ -24,6 +24,7 @@ CAMPAIGNS = [
 {"id": "892", "token": "2395ac68eca37585e8d2c87123051fcc", "name": "Netonnet SE – AON Mars", "market": "se", "type": "aon"},
 {"id": "894", "token": "c7471a1cec946cfb0d378849ee094574", "name": "Netonnet SE – AON April", "market": "se", "type": "aon"},
 {"id": "1223", "token": "ec41c0ab91c33ce117713acad0832b37", "name": "Netonnet SE – AON Maj", "market": "se", "type": "aon"},
+{"id": "1268", "token": "f059a26dfa554b3c85488dfc0457bcde", "name": "Netonnet SE – AON Juli", "market": "se", "type": "aon"},
 
 # Sweden – PM
 {"id": "1044", "token": "cdddb3549b2617f405e4d376e4d64d83", "name": "Netonnet SE – Samsung TV Maj", "market": "se", "type": "pm"},
