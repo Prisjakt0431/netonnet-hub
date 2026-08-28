@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-28T09:10:41Z",
+  "updated": "2026-08-28T09:20:49Z",
   "campaigns": {
     "882": {
       "name": "Netonnet SE – AON Februari",
@@ -373,18 +373,18 @@
       "products": {
         "A.E": {
           "booked": 19999.95,
-          "delivered": 16422.37,
-          "pct": 82.1,
-          "impressions": 173598,
-          "clicks": 251,
+          "delivered": 16680.06,
+          "pct": 83.4,
+          "impressions": 176322,
+          "clicks": 254,
           "ctr": 0.14
         },
         "ROC": {
           "booked": 39999.91,
-          "delivered": 32918.81,
-          "pct": 82.3,
-          "impressions": 347979,
-          "clicks": 398,
+          "delivered": 33185.87,
+          "pct": 83.0,
+          "impressions": 350802,
+          "clicks": 401,
           "ctr": 0.11
         }
       }
@@ -705,6 +705,29 @@
           "ctr": 0.0
         },
         "A.E": {
+          "booked": 34999.92,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
+        }
+      }
+    },
+    "1271": {
+      "name": "Netonnet NO – Pure Elscooter 1-15 Sept",
+      "market": "no",
+      "type": "pm",
+      "products": {
+        "A.E": {
+          "booked": 34999.92,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
+        },
+        "ROC": {
           "booked": 34999.92,
           "delivered": 0.0,
           "pct": 0.0,
