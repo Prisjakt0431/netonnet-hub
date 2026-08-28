@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-28T09:20:49Z",
+  "updated": "2026-08-28T14:18:18Z",
   "campaigns": {
     "882": {
       "name": "Netonnet SE – AON Februari",
@@ -373,19 +373,42 @@
       "products": {
         "A.E": {
           "booked": 19999.95,
-          "delivered": 16680.06,
-          "pct": 83.4,
-          "impressions": 176322,
-          "clicks": 254,
+          "delivered": 17008.42,
+          "pct": 85.0,
+          "impressions": 179793,
+          "clicks": 255,
           "ctr": 0.14
         },
         "ROC": {
           "booked": 39999.91,
-          "delivered": 33185.87,
-          "pct": 83.0,
-          "impressions": 350802,
-          "clicks": 401,
+          "delivered": 33581.58,
+          "pct": 84.0,
+          "impressions": 354985,
+          "clicks": 404,
           "ctr": 0.11
+        }
+      }
+    },
+    "1271": {
+      "name": "Netonnet SE – Pure Elscooter 1-15 Sept",
+      "market": "se",
+      "type": "pm",
+      "products": {
+        "A.E": {
+          "booked": 34999.92,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
+        },
+        "ROC": {
+          "booked": 34999.92,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
         }
       }
     },
@@ -566,26 +589,26 @@
       "products": {
         "Welcome Page": {
           "booked": 19999.84,
-          "delivered": 18190.61,
-          "pct": 91.0,
-          "impressions": 56405,
-          "clicks": 530,
+          "delivered": 18273.5,
+          "pct": 91.4,
+          "impressions": 56662,
+          "clicks": 531,
           "ctr": 0.94
         },
         "ROC": {
           "booked": 30454.96,
-          "delivered": 27218.97,
-          "pct": 89.4,
-          "impressions": 287727,
-          "clicks": 288,
+          "delivered": 27400.98,
+          "pct": 90.0,
+          "impressions": 289651,
+          "clicks": 289,
           "ctr": 0.1
         },
         "A.E": {
           "booked": 24999.94,
-          "delivered": 22550.84,
-          "pct": 90.2,
-          "impressions": 238381,
-          "clicks": 422,
+          "delivered": 22587.36,
+          "pct": 90.3,
+          "impressions": 238767,
+          "clicks": 423,
           "ctr": 0.18
         }
       }
@@ -705,29 +728,6 @@
           "ctr": 0.0
         },
         "A.E": {
-          "booked": 34999.92,
-          "delivered": 0.0,
-          "pct": 0.0,
-          "impressions": 0,
-          "clicks": 0,
-          "ctr": 0.0
-        }
-      }
-    },
-    "1271": {
-      "name": "Netonnet NO – Pure Elscooter 1-15 Sept",
-      "market": "no",
-      "type": "pm",
-      "products": {
-        "A.E": {
-          "booked": 34999.92,
-          "delivered": 0.0,
-          "pct": 0.0,
-          "impressions": 0,
-          "clicks": 0,
-          "ctr": 0.0
-        },
-        "ROC": {
           "booked": 34999.92,
           "delivered": 0.0,
           "pct": 0.0,
