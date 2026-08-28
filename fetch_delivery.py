@@ -55,6 +55,9 @@ CAMPAIGNS = [
 {"id": "1143", "token": "6c8a2e4853fcd9a49cb95cf292513c13", "name": "Netonnet NO – AON Oktober", "market": "no", "type": "aon"},
 {"id": "1144", "token": "47a94e165241f83cc951e2efc6b0994a", "name": "Netonnet NO – AON November", "market": "no", "type": "aon"},
 {"id": "1145", "token": "8f808c0c7c058f2c710a25608d314a0e", "name": "Netonnet NO – AON December", "market": "no", "type": "aon"},
+
+# Norway – PM
+{"id": "1271", "token": "7a9c21282f0dc0f01785f543ec04b598", "name": "Netonnet NO – Pure Elscooter 1-15 Sept", "market": "no", "type": "pm"},
 ]
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (prisjakt delivery-checker/1.0)"}
