@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-24T09:13:40Z",
+  "updated": "2026-09-24T11:41:50Z",
   "campaigns": {
     "882": {
       "name": "Netonnet SE – AON Februari",
@@ -412,6 +412,29 @@
         }
       }
     },
+    "1301": {
+      "name": "Netonnet SE – Loeffen Sep",
+      "market": "se",
+      "type": "pm",
+      "products": {
+        "A.E": {
+          "booked": 21013.97,
+          "delivered": 15990.9,
+          "pct": 76.1,
+          "impressions": 169037,
+          "clicks": 334,
+          "ctr": 0.2
+        },
+        "ROC": {
+          "booked": 21013.97,
+          "delivered": 16034.04,
+          "pct": 76.3,
+          "impressions": 169493,
+          "clicks": 280,
+          "ctr": 0.17
+        }
+      }
+    },
     "881": {
       "name": "Netonnet NO – AON Februari",
       "market": "no",
@@ -620,17 +643,17 @@
       "products": {
         "Welcome Page": {
           "booked": 19999.84,
-          "delivered": 16370.42,
-          "pct": 81.9,
-          "impressions": 50761,
-          "clicks": 666,
+          "delivered": 16431.05,
+          "pct": 82.2,
+          "impressions": 50949,
+          "clicks": 668,
           "ctr": 1.31
         },
         "ROC": {
           "booked": 30454.96,
-          "delivered": 24238.98,
-          "pct": 79.6,
-          "impressions": 256226,
+          "delivered": 24372.37,
+          "pct": 80.0,
+          "impressions": 257636,
           "clicks": 265,
           "ctr": 0.1
         },
