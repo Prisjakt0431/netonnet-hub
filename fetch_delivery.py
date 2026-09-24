@@ -44,6 +44,7 @@ CAMPAIGNS = [
 {"id": "1199", "token": "5a7c5e1cf2bf5932ea716f70ed937e5b", "name": "Netonnet SE – Samsung Phones Aug", "market": "se", "type": "pm"},
 {"id": "1271", "token": "7a9c21282f0dc0f01785f543ec04b598", "name": "Netonnet SE – Pure Elscooter 1-15 Sept", "market": "se", "type": "pm"},
 {"id": "1301", "token": "ff5455363e80e7c14f69eb3369d75453", "name": "Netonnet SE – Loeffen Sep", "market": "se", "type": "pm"},
+{"id": "1346", "token": "0d5de0661f4213d8ca48eb0c762fca48", "name": "Netonnet SE – Apple AirPods Okt", "market": "se", "type": "pm"},
 
 # Norway – AON
 {"id": "881", "token": "443c147680c5f218593e398e22a3faf1", "name": "Netonnet NO – AON Februari", "market": "no", "type": "aon"},
