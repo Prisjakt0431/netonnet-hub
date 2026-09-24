@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-24T11:41:50Z",
+  "updated": "2026-09-24T11:47:30Z",
   "campaigns": {
     "882": {
       "name": "Netonnet SE – AON Februari",
@@ -432,6 +432,37 @@
           "impressions": 169493,
           "clicks": 280,
           "ctr": 0.17
+        }
+      }
+    },
+    "1346": {
+      "name": "Netonnet SE – Apple AirPods Okt",
+      "market": "se",
+      "type": "pm",
+      "products": {
+        "A.E": {
+          "booked": 19999.95,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
+        },
+        "ROC": {
+          "booked": 29999.93,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
+        },
+        "Welcome Page": {
+          "booked": 29999.92,
+          "delivered": 0.0,
+          "pct": 0.0,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0.0
         }
       }
     },
