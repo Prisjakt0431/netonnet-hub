@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15T22:57:14Z",
+  "updated": "2026-10-16T03:52:40Z",
   "campaigns": {
     "882": {
       "name": "Netonnet SE – AON Februari",
@@ -442,25 +442,25 @@
       "products": {
         "A.E": {
           "booked": 19999.95,
-          "delivered": 6070.01,
-          "pct": 30.4,
-          "impressions": 64165,
-          "clicks": 121,
+          "delivered": 6179.46,
+          "pct": 30.9,
+          "impressions": 65322,
+          "clicks": 123,
           "ctr": 0.19
         },
         "ROC": {
           "booked": 29999.93,
-          "delivered": 8976.59,
-          "pct": 29.9,
-          "impressions": 94890,
-          "clicks": 250,
+          "delivered": 9230.03,
+          "pct": 30.8,
+          "impressions": 97569,
+          "clicks": 255,
           "ctr": 0.26
         },
         "Welcome Page": {
           "booked": 29999.92,
-          "delivered": 9556.64,
+          "delivered": 9579.86,
           "pct": 31.9,
-          "impressions": 29633,
+          "impressions": 29705,
           "clicks": 249,
           "ctr": 0.84
         }
@@ -728,25 +728,25 @@
       "products": {
         "Welcome Page": {
           "booked": 6005.6,
-          "delivered": 3286.92,
-          "pct": 54.7,
-          "impressions": 10192,
+          "delivered": 3303.05,
+          "pct": 55.0,
+          "impressions": 10242,
           "clicks": 152,
-          "ctr": 1.49
+          "ctr": 1.48
         },
         "ROC": {
           "booked": 9143.47,
-          "delivered": 4779.48,
-          "pct": 52.3,
-          "impressions": 50523,
+          "delivered": 4791.21,
+          "pct": 52.4,
+          "impressions": 50647,
           "clicks": 88,
           "ctr": 0.17
         },
         "A.E": {
           "booked": 7505.56,
-          "delivered": 3892.03,
-          "pct": 51.9,
-          "impressions": 41142,
+          "delivered": 3912.09,
+          "pct": 52.1,
+          "impressions": 41354,
           "clicks": 83,
           "ctr": 0.2
         }
