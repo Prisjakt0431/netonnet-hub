@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20T21:24:23Z",
+  "updated": "2026-10-21T00:27:18Z",
   "campaigns": {
     "882": {
       "name": "Netonnet SE – AON Februari",
@@ -442,26 +442,26 @@
       "products": {
         "A.E": {
           "booked": 19999.95,
-          "delivered": 13275.97,
-          "pct": 66.4,
-          "impressions": 140338,
-          "clicks": 264,
+          "delivered": 13335.1,
+          "pct": 66.7,
+          "impressions": 140963,
+          "clicks": 265,
           "ctr": 0.19
         },
         "ROC": {
           "booked": 29999.93,
-          "delivered": 20332.76,
-          "pct": 67.8,
-          "impressions": 214934,
-          "clicks": 554,
+          "delivered": 20397.84,
+          "pct": 68.0,
+          "impressions": 215622,
+          "clicks": 555,
           "ctr": 0.26
         },
         "Welcome Page": {
           "booked": 29999.92,
-          "delivered": 20748.36,
-          "pct": 69.2,
-          "impressions": 64336,
-          "clicks": 536,
+          "delivered": 20854.79,
+          "pct": 69.5,
+          "impressions": 64666,
+          "clicks": 538,
           "ctr": 0.83
         }
       }
@@ -728,27 +728,27 @@
       "products": {
         "Welcome Page": {
           "booked": 6005.6,
-          "delivered": 4308.28,
-          "pct": 71.7,
-          "impressions": 13359,
+          "delivered": 4325.69,
+          "pct": 72.0,
+          "impressions": 13413,
           "clicks": 189,
           "ctr": 1.41
         },
         "ROC": {
           "booked": 9143.47,
-          "delivered": 6225.63,
-          "pct": 68.1,
-          "impressions": 65810,
+          "delivered": 6252.02,
+          "pct": 68.4,
+          "impressions": 66089,
           "clicks": 118,
           "ctr": 0.18
         },
         "A.E": {
           "booked": 7505.56,
-          "delivered": 5121.45,
-          "pct": 68.2,
-          "impressions": 54138,
+          "delivered": 5130.25,
+          "pct": 68.4,
+          "impressions": 54231,
           "clicks": 111,
-          "ctr": 0.21
+          "ctr": 0.2
         }
       }
     },
