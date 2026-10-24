@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23T21:11:29Z",
+  "updated": "2026-10-24T00:23:07Z",
   "campaigns": {
     "882": {
       "name": "Netonnet SE – AON Februari",
@@ -442,25 +442,25 @@
       "products": {
         "A.E": {
           "booked": 19999.95,
-          "delivered": 17395.9,
-          "pct": 87.0,
-          "impressions": 183889,
+          "delivered": 17446.51,
+          "pct": 87.2,
+          "impressions": 184424,
           "clicks": 336,
           "ctr": 0.18
         },
         "ROC": {
           "booked": 29999.93,
-          "delivered": 26502.0,
-          "pct": 88.3,
-          "impressions": 280148,
-          "clicks": 672,
+          "delivered": 26580.8,
+          "pct": 88.6,
+          "impressions": 280981,
+          "clicks": 673,
           "ctr": 0.24
         },
         "Welcome Page": {
           "booked": 29999.92,
-          "delivered": 27077.75,
-          "pct": 90.3,
-          "impressions": 83962,
+          "delivered": 27168.05,
+          "pct": 90.6,
+          "impressions": 84242,
           "clicks": 697,
           "ctr": 0.83
         }
@@ -728,25 +728,25 @@
       "products": {
         "Welcome Page": {
           "booked": 6005.6,
-          "delivered": 4941.02,
-          "pct": 82.3,
-          "impressions": 15321,
+          "delivered": 4952.31,
+          "pct": 82.5,
+          "impressions": 15356,
           "clicks": 217,
-          "ctr": 1.42
+          "ctr": 1.41
         },
         "ROC": {
           "booked": 9143.47,
-          "delivered": 7189.6,
-          "pct": 78.6,
-          "impressions": 76000,
+          "delivered": 7206.34,
+          "pct": 78.8,
+          "impressions": 76177,
           "clicks": 132,
           "ctr": 0.17
         },
         "A.E": {
           "booked": 7505.56,
-          "delivered": 5830.86,
-          "pct": 77.7,
-          "impressions": 61637,
+          "delivered": 5838.05,
+          "pct": 77.8,
+          "impressions": 61713,
           "clicks": 126,
           "ctr": 0.2
         }
