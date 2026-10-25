@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25T00:06:34Z",
+  "updated": "2026-10-25T07:25:57Z",
   "campaigns": {
     "882": {
       "name": "Netonnet SE – AON Februari",
@@ -442,26 +442,26 @@
       "products": {
         "A.E": {
           "booked": 19999.95,
-          "delivered": 18469.14,
-          "pct": 92.3,
-          "impressions": 195234,
-          "clicks": 354,
+          "delivered": 18749.44,
+          "pct": 93.7,
+          "impressions": 198197,
+          "clicks": 365,
           "ctr": 0.18
         },
         "ROC": {
           "booked": 29999.93,
-          "delivered": 28301.67,
-          "pct": 94.3,
-          "impressions": 299172,
-          "clicks": 724,
+          "delivered": 28590.58,
+          "pct": 95.3,
+          "impressions": 302226,
+          "clicks": 736,
           "ctr": 0.24
         },
         "Welcome Page": {
           "booked": 29999.92,
-          "delivered": 28972.43,
-          "pct": 96.6,
-          "impressions": 89837,
-          "clicks": 731,
+          "delivered": 29105.63,
+          "pct": 97.0,
+          "impressions": 90250,
+          "clicks": 732,
           "ctr": 0.81
         }
       }
@@ -728,26 +728,26 @@
       "products": {
         "Welcome Page": {
           "booked": 6005.6,
-          "delivered": 5153.55,
-          "pct": 85.8,
-          "impressions": 15980,
-          "clicks": 227,
+          "delivered": 5187.09,
+          "pct": 86.4,
+          "impressions": 16084,
+          "clicks": 228,
           "ctr": 1.42
         },
         "ROC": {
           "booked": 9143.47,
-          "delivered": 7464.32,
-          "pct": 81.6,
-          "impressions": 78904,
-          "clicks": 136,
+          "delivered": 7489.1,
+          "pct": 81.9,
+          "impressions": 79166,
+          "clicks": 138,
           "ctr": 0.17
         },
         "A.E": {
           "booked": 7505.56,
-          "delivered": 6071.62,
-          "pct": 80.9,
-          "impressions": 64182,
-          "clicks": 131,
+          "delivered": 6150.99,
+          "pct": 82.0,
+          "impressions": 65021,
+          "clicks": 133,
           "ctr": 0.2
         }
       }
